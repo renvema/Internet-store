@@ -32,7 +32,6 @@
     printWriter.write("</center>");
 %>
 
-</table>
 
 </body>
 </html>

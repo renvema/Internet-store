@@ -1,7 +1,8 @@
 package controller;
 
 import model.Product;
-
+import service.ProductService;
+import service.impl.ProductServiceImpl;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,8 +12,11 @@ import java.io.IOException;
 
 @WebServlet(value = "/add")
 public class ProductAddServlet extends HttpServlet {
+
+    private static final ProductService productService = new ProductServiceImpl();
+
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("product.jsp").forward(req,resp);
+        req.getRequestDispatcher("product.jsp").forward(req, resp);
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -20,9 +24,8 @@ public class ProductAddServlet extends HttpServlet {
         String description = req.getParameter("description");
         Double price = Double.parseDouble(req.getParameter("price"));
 
-        Product user = new Product(1L, title, description,price);
-        System.out.println("Кладем товар в корзину");
-        System.out.println(user);
+        Product product = new Product(1L, title, description, price);
+        productService.addProduct(product);
         resp.sendRedirect("/");
     }
 }
