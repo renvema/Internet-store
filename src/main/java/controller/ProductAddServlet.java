@@ -21,11 +21,13 @@ public class ProductAddServlet extends HttpServlet {
 
     private static final ProductService productService = new ProductServiceImpl();
 
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
         req.getRequestDispatcher("product.jsp").forward(req, resp);
     }
 
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
         String title = req.getParameter("title");
         String description = req.getParameter("description");
         Double price = Double.parseDouble(req.getParameter("price"));

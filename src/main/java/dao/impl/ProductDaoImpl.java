@@ -1,21 +1,20 @@
 package dao.impl;
 
 import dao.ProductDao;
+import db.Storage;
 import model.Product;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDaoImpl implements ProductDao {
-    private List<Product> productList = new ArrayList<>();
 
     @Override
     public void addProduct(Product product) {
-        productList.add(product);
+        Storage.PRODUCTS.add(product);
     }
 
     @Override
     public List<Product> getAll() {
-        return productList;
+        return Storage.PRODUCTS;
     }
 }
