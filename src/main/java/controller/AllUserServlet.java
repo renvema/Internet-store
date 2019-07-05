@@ -15,11 +15,12 @@ import java.util.List;
 @WebServlet("/users")
 public class AllUserServlet extends HttpServlet {
 
-    private static final UserService userService =new UserServiceImpl();
+    private static final UserService userService = new UserServiceImpl();
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<User> allUsers= userService.getAll();
-        req.setAttribute("allUsers",allUsers);
+        List<User> allUsers = userService.getAll();
+        req.setAttribute("allUsers", allUsers);
         req.getRequestDispatcher("users.jsp").forward(req, resp);
     }
 }

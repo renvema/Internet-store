@@ -19,6 +19,7 @@
     PrintWriter printWriter = response.getWriter();
     printWriter.write("<center>");
     printWriter.write("<h2> Список пользователей </h2>");
+    printWriter.write("<button><a href=" + "register.jsp" + ">Registration</a></button>");
     printWriter.write("<table border=\"1\" bgcolor=\"#dda0dd\">\n" +
             "    <th>Email</th>\n" +
             "    <th>Password</th>");

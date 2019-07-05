@@ -14,19 +14,19 @@
 
 <center>
     <h4>
-            <%
-        String error = (String) request.getAttribute("error");
-        if (error != null) {
-            response.getWriter().write(error);
-        }
-       System.out.println(error);
-    %>
+        <%
+            String error = (String) request.getAttribute("error");
+            if (error != null) {
+                response.getWriter().write(error);
+            }
+            System.out.println(error);
+        %>
     </h4>
 
     <form action="/register" method="post">
-        Email <input name="email" type="email"/> <br>
-        Password <input name="password" type="password"/> <br>
-        Repeat password <input name="repeatPassword" type="password"/> <br>
+        Email <input name="email" type="email" value="${email}"/> <br>
+        Password <input name="password" type="password" value=""/> <br>
+        Repeat password <input name="repeatPassword" type="password" value=""/> <br>
         <button type="submit">Register</button>
     </form>
 </center>

@@ -1,5 +1,7 @@
 package controller;
 
+import dao.UserDao;
+import factory.UserDaoFactory;
 import model.User;
 import service.UserService;
 import service.impl.UserServiceImpl;
@@ -13,8 +15,11 @@ import java.io.IOException;
 
 @WebServlet(value = "/register")
 public class UserRegistrationServlet extends HttpServlet {
+    private UserDao userDao = UserDaoFactory.getUserDao();
+    private User user;
+    private Long id = 1L;
 
-    private static final UserService userService =new UserServiceImpl();
+    private static final UserService userService = new UserServiceImpl();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -29,8 +34,10 @@ public class UserRegistrationServlet extends HttpServlet {
         if (password.equals(repeatPassword)) {
             User user = new User(1L, email, password);
             userService.addUser(user);
-            resp.sendRedirect("/");
+            id++;
+            resp.sendRedirect("/users");
         } else {
+            req.setAttribute("email", email);
             req.setAttribute("error", "You passwords not equals");
             req.getRequestDispatcher("register.jsp").forward(req, resp);
         }

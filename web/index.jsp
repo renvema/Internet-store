@@ -13,9 +13,17 @@
 <body>
 Welcome! You can register if you want :-P
 <center>
-    <a href="/register">Registration</a><br>
-
-    <a href="/add">Add product</a>
+    <h2>Sign In</h2>
+    <form>
+        Email:<br>
+        <input type="email" name="email" value="">
+        <br>
+        Password:<br>
+        <input type="password" name="password" value="">
+        <br><br>
+        <button><a href="users.jsp">Sign In</a></button>
+        <button><a href="product.jsp">Add Product</a></button>
+    </form>
 </center>
 </body>
 
