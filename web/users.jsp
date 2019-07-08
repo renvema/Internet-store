@@ -30,6 +30,7 @@
         printWriter.write("<td>" + user.getPassword());
         printWriter.write("</tr>");
     }
+    printWriter.write("<button><a href=" + "tableproduct.jsp" + ">Товары</a></button>");
     printWriter.write("</center>");
 %>
 

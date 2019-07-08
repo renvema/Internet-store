@@ -35,6 +35,6 @@ public class ProductAddServlet extends HttpServlet {
         Product product = new Product(1L, title, description, price);
         productService.addProduct(product);
         id++;
-        resp.sendRedirect("/");
+        resp.sendRedirect("/tableproduct");
     }
 }
