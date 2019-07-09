@@ -8,6 +8,7 @@ import service.ProductService;
 import java.util.List;
 
 public class ProductServiceImpl implements ProductService {
+
     private static final ProductDao productDao = new ProductDaoImpl();
 
     public void addProduct(Product product) {

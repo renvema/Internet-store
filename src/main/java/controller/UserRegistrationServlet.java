@@ -2,9 +2,9 @@ package controller;
 
 import dao.UserDao;
 import factory.UserDaoFactory;
+import factory.UserServiceFactory;
 import model.User;
 import service.UserService;
-import service.impl.UserServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,11 +15,10 @@ import java.io.IOException;
 
 @WebServlet(value = "/register")
 public class UserRegistrationServlet extends HttpServlet {
-    private UserDao userDao = UserDaoFactory.getUserDao();
-    private User user;
+
     private Long id = 1L;
 
-    private static final UserService userService = new UserServiceImpl();
+    private static final UserService userService = UserServiceFactory.getInstance();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -31,7 +30,11 @@ public class UserRegistrationServlet extends HttpServlet {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
         String repeatPassword = req.getParameter("repeatPassword");
-        if (password.equals(repeatPassword)) {
+
+        if (email.isEmpty() || email.isEmpty() || password.isEmpty()) {
+            req.setAttribute("error", "Empty fields!");
+            req.getRequestDispatcher("register.jsp").forward(req, resp);
+        } else if (password.equals(repeatPassword)) {
             User user = new User(1L, email, password);
             userService.addUser(user);
             id++;

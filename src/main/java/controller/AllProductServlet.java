@@ -14,6 +14,7 @@ import java.util.List;
 
 @WebServlet("/tableproduct")
 public class AllProductServlet extends HttpServlet {
+
     private static final ProductService productService = new ProductServiceImpl();
 
     @Override

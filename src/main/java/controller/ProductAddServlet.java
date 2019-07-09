@@ -1,10 +1,8 @@
 package controller;
 
-import dao.ProductDao;
-import factory.ProductDaoFactory;
+import factory.ProductServiceFactory;
 import model.Product;
 import service.ProductService;
-import service.impl.ProductServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,11 +13,10 @@ import java.io.IOException;
 
 @WebServlet(value = "/add")
 public class ProductAddServlet extends HttpServlet {
-    private ProductDao productDao = ProductDaoFactory.getProductDao();
-    private Product product;
+
     private Long id = 1L;
 
-    private static final ProductService productService = new ProductServiceImpl();
+    private static final ProductService productService = ProductServiceFactory.getInstance();
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {

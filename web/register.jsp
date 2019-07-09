@@ -19,8 +19,7 @@
             if (error != null) {
                 response.getWriter().write(error);
             }
-            System.out.println(error);
-        %>
+                   %>
     </h4>
 
     <form action="/register" method="post">

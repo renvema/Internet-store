@@ -22,16 +22,22 @@
     printWriter.write("<button><a href=" + "register.jsp" + ">Registration</a></button>");
     printWriter.write("<table border=\"1\" bgcolor=\"#dda0dd\">\n" +
             "    <th>Email</th>\n" +
-            "    <th>Password</th>");
+            "    <th>Password</th>\n" +
+            "    <th></th>\n" +
+            "    <th></th>");
     List<User> allUsers = (List<User>) request.getAttribute("allUsers");
     for (User user : allUsers) {
         printWriter.write("<tr>");
         printWriter.write("<td>" + user.getEmail());
         printWriter.write("<td>" + user.getPassword());
+        printWriter.write("<td>"+"<button><a href=" + "edit_user.jsp" + ">Edit</a></button>");
+        printWriter.write("<td>"+"<button><a href=" + "delete_user.jsp" + ">Delete</a></button>");
         printWriter.write("</tr>");
-    }
-    printWriter.write("<button><a href=" + "tableproduct.jsp" + ">Товары</a></button>");
+     }
+
     printWriter.write("</center>");
+    printWriter.write("<button><a href=" + "tableproduct.jsp" + ">Товары</a></button>");
+
 %>
 
 
