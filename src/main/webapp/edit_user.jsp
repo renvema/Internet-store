@@ -14,9 +14,8 @@
 </head>
 <body>
 <% List<User> allUsers = (List<User>) request.getAttribute("allUsers");
-
     %>
-%>
+
 <center>
     <h4>Edit user data</h4>
 <form action="/register" method="post">
@@ -24,6 +23,7 @@
     Password <input name="password" type="password" value="${password}"/> <br>
        <button type="submit">Save</button>
 </form>
+
     </center>
 </body>
 </html>

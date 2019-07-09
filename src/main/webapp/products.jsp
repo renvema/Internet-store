@@ -18,11 +18,11 @@
     PrintWriter printWriter = response.getWriter();
     printWriter.write("<center>");
     printWriter.write("<h2> Список продуктов </h2>");
-    printWriter.write("<button><a href=" + "product.jsp" + ">Add product</a></button>");
+    printWriter.write("<button><a href=" + "add_product.jsp" + ">Add product</a></button>");
     printWriter.write("<table border=\"1\" bgcolor=\"#dda0dd\">\n" +
             "    <th>Title</th>\n" +
             "    <th>Description</th>\n" +
-            "    <th>Price</th>"+
+            "    <th>Price</th>" +
             "    <th></th>\n" +
             "    <th></th>");
     List<Product> allProduct = (List<Product>) request.getAttribute("allProduct");
@@ -31,10 +31,9 @@
         printWriter.write("<td>" + product.getTitle());
         printWriter.write("<td>" + product.getDescription());
         printWriter.write("<td>" + product.getPrice());
-        printWriter.write("<td>"+"<button><a href=" + "edit_product.jsp" + ">Edit</a></button>");
-        printWriter.write("<td>"+"<button><a href=" + "delete_product.jsp" + ">Delete</a></button>");
+        printWriter.write("<td>" + "<button><a href=" + "edit_product.jsp" + ">Edit</a></button>");
+        printWriter.write("<td>" + "<button><a href=" + "delete_product.jsp" + ">Delete</a></button>");
         printWriter.write("</tr>");
-
     }
     printWriter.write("<button><a href=" + "users.jsp" + ">Пользователи</a></button>");
     printWriter.write("</center>");

@@ -22,10 +22,9 @@ Welcome! You can register if you want :-P
         <input type="password" name="password" value="">
         <br><br>
         <button><a href="users.jsp">Sign In</a></button>
-        <button><a href="product.jsp">Add Product</a></button>
+        <button><a href="add_product.jsp">Add Product</a></button>
     </form>
 </center>
 </body>
 
 </html>
-

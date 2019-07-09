@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ProductDaoImpl implements ProductDao {
 
-    private static final Logger logger = Logger.getLogger(UserDaoImpl.class);
+    private static final Logger logger = Logger.getLogger(ProductDaoImpl.class);
 
     @Override
     public void addProduct(Product product) {

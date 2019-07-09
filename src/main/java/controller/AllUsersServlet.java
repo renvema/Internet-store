@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet("/users")
-public class AllUserServlet extends HttpServlet {
+public class AllUsersServlet extends HttpServlet {
 
     private static final UserService userService = new UserServiceImpl();
 

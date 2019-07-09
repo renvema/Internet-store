@@ -22,12 +22,13 @@
                    %>
     </h4>
 
-    <form action="/register" method="post">
+    <form action="/add/user" method="post">
         Email <input name="email" type="email" value="${email}"/> <br>
         Password <input name="password" type="password" value=""/> <br>
         Repeat password <input name="repeatPassword" type="password" value=""/> <br>
         <button type="submit">Register</button>
     </form>
+
 </center>
 
 </body>

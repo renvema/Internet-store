@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/tableproduct")
-public class AllProductServlet extends HttpServlet {
+@WebServlet("/products")
+public class AllProductsServlet extends HttpServlet {
 
     private static final ProductService productService = new ProductServiceImpl();
 
@@ -21,6 +21,6 @@ public class AllProductServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Product> allProduct = productService.getAll();
         req.setAttribute("allProduct", allProduct);
-        req.getRequestDispatcher("tableproduct.jsp").forward(req, resp);
+        req.getRequestDispatcher("products.jsp").forward(req, resp);
     }
 }

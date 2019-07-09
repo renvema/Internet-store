@@ -12,12 +12,12 @@
 </head>
 <body>
 <center>
-    <form action="/add" method="post">
+
+    <form action="/add/product" method="post">
         Title <input name="title" type="text"/> <br>
         Description <input name="description" type="text"/> <br>
         Price <input name="price" type="number" step="0.01"/> <br>
         <button type="addproduct">Add product</button>
-
     </form>
 
 </center>
