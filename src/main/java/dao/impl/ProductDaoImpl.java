@@ -21,4 +21,20 @@ public class ProductDaoImpl implements ProductDao {
     public List<Product> getAll() {
         return Storage.PRODUCTS;
     }
+
+    @Override
+    public Product getProductsById(Long productId) {
+        for (Product product : Storage.PRODUCTS) {
+            if (product.getId().equals(productId)) {
+                return product;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public void deleteProduct(Long productId) {
+        Storage.PRODUCTS.remove(productId);
+
+    }
 }

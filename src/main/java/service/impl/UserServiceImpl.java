@@ -2,6 +2,7 @@ package service.impl;
 
 import dao.UserDao;
 import dao.impl.UserDaoImpl;
+import db.Storage;
 import model.User;
 import service.UserService;
 
@@ -17,5 +18,13 @@ public class UserServiceImpl implements UserService {
 
     public List<User> getAll() {
         return userDao.getAll();
+    }
+
+    public User getUsersById(Long userId) {
+        return userDao.getUsersById(userId);
+    }
+
+    public void deleteUser(Long userId) {
+        Storage.USERS.remove(userId);
     }
 }

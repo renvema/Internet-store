@@ -17,7 +17,7 @@
 <%
     PrintWriter printWriter = response.getWriter();
     printWriter.write("<center>");
-    printWriter.write("<h2> Список продуктов </h2>");
+    printWriter.write("<h2> All products </h2>");
     printWriter.write("<button><a href=" + "add_product.jsp" + ">Add product</a></button>");
     printWriter.write("<table border=\"1\" bgcolor=\"#dda0dd\">\n" +
             "    <th>Title</th>\n" +
@@ -38,6 +38,7 @@
     printWriter.write("<button><a href=" + "users.jsp" + ">Пользователи</a></button>");
     printWriter.write("</center>");
 %>
+
 
 </body>
 </html>

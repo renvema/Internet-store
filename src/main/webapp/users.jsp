@@ -18,7 +18,7 @@
 <%
     PrintWriter printWriter = response.getWriter();
     printWriter.write("<center>");
-    printWriter.write("<h2> Список пользователей </h2>");
+    printWriter.write("<h2> All users </h2>");
     printWriter.write("<button><a href=" + "add_user.jsp" + ">Registration</a></button>");
     printWriter.write("<table border=\"1\" bgcolor=\"#dda0dd\">\n" +
             "    <th>Email</th>\n" +
@@ -31,13 +31,31 @@
         printWriter.write("<td>" + user.getEmail());
         printWriter.write("<td>" + user.getPassword());
         printWriter.write("<td>" + "<button><a href=" + "edit_user.jsp" + ">Edit</a></button>");
-        printWriter.write("<td>" + "<button><a href=" + "delete_user.jsp" + ">Delete</a></button>");
+        printWriter.write("<td>" + "<button><a href=" + "users.jsp" + ">Delete</a></button>");
         printWriter.write("</tr>");
     }
     printWriter.write("</center>");
     printWriter.write("<button><a href=" + "products.jsp" + ">Товары</a></button>");
 %>
+<%--<center>--%>
+<%--    <h2> All users </h2>--%>
 
+<%--    <button><a href="/add/user"> Add user </a></button>--%>
+<%--    <button><a href="/products">Products</a></button>--%>
+<%--    <table border=1 bgcolor="#dda0dd">--%>
+<%--        <tr>--%>
+<%--            <th>Email</th>--%>
+<%--            <th>Password</th>--%>
+<%--        </tr>--%>
+<%--        <c:forEach var="element" items="${allUsers}">--%>
+<%--            <tr>--%>
+<%--                <td>${element.email}</td>--%>
+<%--                <td>${element.password}</td>--%>
+<%--                            &lt;%&ndash;                <button><a href="/edit/user">Edit</a></button>&ndash;%&gt;--%>
+<%--            </tr>--%>
+<%--        </c:forEach>--%>
 
+<%--    </table>--%>
+<%--</center>--%>
 </body>
 </html>

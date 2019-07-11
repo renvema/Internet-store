@@ -13,17 +13,17 @@
     <title>Edit user</title>
 </head>
 <body>
-<% List<User> allUsers = (List<User>) request.getAttribute("allUsers");
-    %>
-
 <center>
-    <h4>Edit user data</h4>
-<form action="/register" method="post">
-    Email <input name="email" type="email" value="${email}"/> <br>
-    Password <input name="password" type="password" value="${password}"/> <br>
-       <button type="submit">Save</button>
-</form>
 
-    </center>
+    ${valid}
+    <h4>Edit user data</h4>
+    <form action="/edit/user" method="post">
+        Email <input name="email" type="email" value="${oldEmail}"/> <br>
+        Password <input name="password" type="password" value="${oldPassword}"/> <br>
+
+        <button type="submit">Save</button>
+    </form>
+
+</center>
 </body>
 </html>
