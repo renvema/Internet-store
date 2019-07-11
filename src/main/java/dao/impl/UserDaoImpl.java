@@ -21,4 +21,20 @@ public class UserDaoImpl implements UserDao {
     public List<User> getAll() {
         return Storage.USERS;
     }
+
+    @Override
+    public User getUsersById(Long userId) {
+        for (User user : Storage.USERS) {
+            if (user.getId().equals(userId)) {
+                return user;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public void deleteUser(User user) {
+        Storage.USERS.remove(user);
+    }
+
 }

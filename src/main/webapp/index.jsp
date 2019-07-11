@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%--
   Created by IntelliJ IDEA.
   User: Maryana
@@ -21,7 +22,7 @@ Welcome! You can register if you want :-P
         Password:<br>
         <input type="password" name="password" value="">
         <br><br>
-        <button><a href="users.jsp">Sign In</a></button>
+        <button><a href="/users">Sign In</a></button>
         <button><a href="add_product.jsp">Add Product</a></button>
     </form>
 </center>

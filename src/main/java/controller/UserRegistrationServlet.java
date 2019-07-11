@@ -1,6 +1,5 @@
 package controller;
 
-import dao.impl.UserDaoImpl;
 import factory.UserServiceFactory;
 import model.User;
 import org.apache.log4j.Logger;
@@ -35,7 +34,7 @@ public class UserRegistrationServlet extends HttpServlet {
             req.setAttribute("error", "Empty fields!");
             req.getRequestDispatcher("/add_user.jsp").forward(req, resp);
         } else if (password.equals(repeatPassword)) {
-            User user = new User(IdGenerator.generate(), email, password);
+            User user = new User(IdGenerator.generateIdUser(), email, password);
             userService.addUser(user);
             resp.sendRedirect("/users");
         } else {

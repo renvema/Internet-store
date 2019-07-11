@@ -1,5 +1,6 @@
 package controller;
 
+import factory.ProductServiceFactory;
 import model.Product;
 import service.ProductService;
 import service.impl.ProductServiceImpl;
@@ -15,7 +16,7 @@ import java.util.List;
 @WebServlet("/products")
 public class AllProductsServlet extends HttpServlet {
 
-    private static final ProductService productService = new ProductServiceImpl();
+    private static final ProductService productService = ProductServiceFactory.getInstance();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

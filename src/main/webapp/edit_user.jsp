@@ -8,22 +8,23 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>Edit user</title>
 </head>
 <body>
-<% List<User> allUsers = (List<User>) request.getAttribute("allUsers");
-    %>
-
 <center>
-    <h4>Edit user data</h4>
-<form action="/register" method="post">
-    Email <input name="email" type="email" value="${email}"/> <br>
-    Password <input name="password" type="password" value="${password}"/> <br>
-       <button type="submit">Save</button>
-</form>
 
-    </center>
+    ${valid}
+    <h4>Edit user data</h4>
+    <form action="/edit/user" method="post">
+        Email <input name="email" type="email" value="${oldEmail}"/> <br>
+        Password <input name="password" type="password" value="${oldPassword}"/> <br>
+
+        <button type="submit">Save</button>
+    </form>
+
+</center>
 </body>
 </html>
