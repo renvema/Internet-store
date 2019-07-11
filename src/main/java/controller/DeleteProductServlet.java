@@ -26,10 +26,3 @@ public class DeleteProductServlet extends HttpServlet {
         req.getRequestDispatcher("/products.jsp").forward(req, resp);
     }
 }
-//    Long id = Long.valueOf(req.getParameter("id"));
-//    User user=userService.getUsersById(id);
-//
-//        userService.deleteUser(user);
-//                req.setAttribute("allUsers", userService.getAll());
-//                req.getRequestDispatcher("/users.jsp").forward(req, resp);
-//                }
