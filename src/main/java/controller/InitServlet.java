@@ -26,9 +26,4 @@ public class InitServlet extends HttpServlet {
         User user = new User(IdGenerator.generateIdUser(), "user@user.ua", "user", User.ROLE.USER);
         userService.addUser(user);
     }
-
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-
-    }
 }

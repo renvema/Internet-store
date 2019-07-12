@@ -1,7 +1,8 @@
 package controller.filter;
 
-import dao.UserDao;
+import factory.UserServiceFactory;
 import model.User;
+import service.UserService;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -9,12 +10,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.concurrent.atomic.AtomicReference;
 
 import static java.util.Objects.nonNull;
 
 @WebFilter(value = "/signin")
 public class AuthFilter implements Filter {
+
+    private static final UserService userService = UserServiceFactory.getInstance();
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -31,19 +33,17 @@ public class AuthFilter implements Filter {
         final String email = req.getParameter("email");
         final String password = req.getParameter("password");
 
-        @SuppressWarnings("unchecked") final AtomicReference<UserDao> dao =
-                (AtomicReference<UserDao>) req.getServletContext().getAttribute("dao");
         final HttpSession session = req.getSession();
 
         if (nonNull(session.getAttribute("email")) &&
                 (nonNull(session.getAttribute("dao")))) {
             final User.ROLE role = (User.ROLE) session.getAttribute("role");
             moveToMenu(req, resp, role);
-        } else if (dao.get().userIsExist(email, password)) {
-            final User.ROLE role = dao.get().getRoleByLoginPassword(email, password);
-            req.getSession().setAttribute("password", password);
-            req.getSession().setAttribute("email", email);
-            req.getSession().setAttribute("role", role);
+        } else if (userService.userIsExist(email, password)) {
+            final User.ROLE role = userService.getRoleByLoginPassword(email, password);
+            session.setAttribute("password", password);
+            session.setAttribute("email", email);
+            session.setAttribute("role", role);
             moveToMenu(req, resp, role);
         } else {
             moveToMenu(req, resp, User.ROLE.UNKNOWN);
@@ -56,7 +56,7 @@ public class AuthFilter implements Filter {
         if (role.equals(User.ROLE.ADMIN)) {
             req.getRequestDispatcher("/users.jsp").forward(req, resp);
         } else if (role.equals(User.ROLE.USER)) {
-            req.getRequestDispatcher("/page/user").forward(req, resp);
+            req.getRequestDispatcher("/products.jsp").forward(req, resp);
         } else {
             req.getRequestDispatcher("/index.jsp").forward(req, resp);
         }

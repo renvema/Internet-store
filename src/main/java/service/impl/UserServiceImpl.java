@@ -1,8 +1,6 @@
 package service.impl;
 
 import dao.UserDao;
-import dao.impl.UserDaoImpl;
-import db.Storage;
 import factory.UserDaoFactory;
 import model.User;
 import service.UserService;
