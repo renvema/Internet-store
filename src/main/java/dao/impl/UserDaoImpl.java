@@ -37,4 +37,29 @@ public class UserDaoImpl implements UserDao {
         Storage.USERS.remove(user);
     }
 
+    public User.ROLE getRoleByLoginPassword(String email, String password) {
+        User.ROLE result = User.ROLE.UNKNOWN;
+
+        for (User user : Storage.USERS) {
+            if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
+                result = user.getRole();
+            }
+        }
+
+        return result;
+    }
+
+    public boolean userIsExist(String email, String password) {
+
+        boolean result = false;
+
+        for (User user : Storage.USERS) {
+            if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
+                result = true;
+                break;
+            }
+        }
+
+        return result;
+    }
 }

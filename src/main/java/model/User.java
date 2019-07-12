@@ -7,6 +7,7 @@ public class User {
     private Long id;
     private String email;
     private String password;
+    private ROLE role;
 
     public User(Long id, String email, String password) {
         this.id = id;
@@ -17,6 +18,13 @@ public class User {
     public User(String email, String password) {
         this.email = email;
         this.password = password;
+    }
+
+    public User(Long id, String email, String password, ROLE role) {
+        this.id = id;
+        this.email = email;
+        this.password = password;
+        this.role = role;
     }
 
     public Long getId() {
@@ -43,6 +51,14 @@ public class User {
         this.password = password;
     }
 
+    public ROLE getRole() {
+        return role;
+    }
+
+    public void setRole(ROLE role) {
+        this.role = role;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -65,5 +81,11 @@ public class User {
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 '}';
+    }
+
+    public enum ROLE {
+        USER,
+        ADMIN,
+        UNKNOWN
     }
 }

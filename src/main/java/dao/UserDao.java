@@ -14,4 +14,8 @@ public interface UserDao {
 
     void deleteUser(User user);
 
+    User.ROLE getRoleByLoginPassword(String email, String password);
+
+    boolean userIsExist(String email, String password);
+
 }

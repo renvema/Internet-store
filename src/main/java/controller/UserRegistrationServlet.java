@@ -34,7 +34,7 @@ public class UserRegistrationServlet extends HttpServlet {
             req.setAttribute("error", "Empty fields!");
             req.getRequestDispatcher("/add_user.jsp").forward(req, resp);
         } else if (password.equals(repeatPassword)) {
-            User user = new User(IdGenerator.generateIdUser(), email, password);
+            User user = new User(IdGenerator.generateIdUser(), email, password, User.ROLE.USER);
             userService.addUser(user);
             resp.sendRedirect("/users");
         } else {

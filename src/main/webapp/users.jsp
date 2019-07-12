@@ -15,29 +15,6 @@
 </head>
 <body>
 
-
-<%--<%--%>
-<%--    PrintWriter printWriter = response.getWriter();--%>
-<%--    printWriter.write("<center>");--%>
-<%--    printWriter.write("<h2> All users </h2>");--%>
-<%--    printWriter.write("<button><a href=" + "add_user.jsp" + ">Registration</a></button>");--%>
-<%--    printWriter.write("<table border=\"1\" bgcolor=\"#dda0dd\">\n" +--%>
-<%--            "    <th>Email</th>\n" +--%>
-<%--            "    <th>Password</th>\n" +--%>
-<%--            "    <th></th>\n" +--%>
-<%--            "    <th></th>");--%>
-<%--    List<User> allUsers = (List<User>) request.getAttribute("allUsers");--%>
-<%--    for (User user : allUsers) {--%>
-<%--        printWriter.write("<tr>");--%>
-<%--        printWriter.write("<td>" + user.getEmail());--%>
-<%--        printWriter.write("<td>" + user.getPassword());--%>
-<%--        printWriter.write("<td>" + "<button><a href=" + "/edit/user?id=" + user.getId() + ">Edit</a></button>");--%>
-<%--        printWriter.write("<td>" + "<button><a href=" + "/delete/user?id=" + user.getId() + ">Delete</a></button>");--%>
-<%--        printWriter.write("</tr>");--%>
-<%--    }--%>
-<%--    printWriter.write("</center>");--%>
-<%--    printWriter.write("<button><a href=" + "products.jsp" + ">Товары</a></button>");--%>
-<%--%>--%>
 <center>
     <h2> All users </h2>
 
@@ -52,6 +29,7 @@
             <tr>
                 <td>${element.email}</td>
                 <td>${element.password}</td>
+                <td>${element.role}</td>
                 <td>
                     <button><a href="/edit/user?id=${element.id}">Edit</a></button>
                 </td>

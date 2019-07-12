@@ -15,7 +15,7 @@
 Welcome! You can register if you want :-P
 <center>
     <h2>Sign In</h2>
-    <form>
+    <form method="post" action="/sign">
         Email:<br>
         <input type="email" name="email" value="">
         <br>
@@ -23,9 +23,8 @@ Welcome! You can register if you want :-P
         <input type="password" name="password" value="">
         <br><br>
         <button><a href="/users">Sign In</a></button>
-        <button><a href="add_product.jsp">Add Product</a></button>
     </form>
-</center>
+   </center>
 </body>
 
 </html>

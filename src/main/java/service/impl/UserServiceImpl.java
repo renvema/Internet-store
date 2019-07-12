@@ -28,4 +28,14 @@ public class UserServiceImpl implements UserService {
     public void deleteUser(User user) {
         userDao.deleteUser(user);
     }
+
+    @Override
+    public User.ROLE getRoleByLoginPassword(String email, String password) {
+        return userDao.getRoleByLoginPassword(email, password);
+    }
+
+    @Override
+    public boolean userIsExist(String email, String password) {
+        return userDao.userIsExist(email, password);
+    }
 }
