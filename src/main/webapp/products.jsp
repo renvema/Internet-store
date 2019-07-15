@@ -19,7 +19,6 @@
     <h2> All products </h2>
 
     <button><a href="/add/product"> Add product </a></button>
-    <button><a href="/admin/users">Users</a></button>
     <table border=1 bgcolor="#dda0dd">
         <tr>
             <th>Title</th>
@@ -28,7 +27,7 @@
             <th></th>
             <th></th>
         </tr>
-        <c:forEach var="element" items="${allProduct}">
+        <c:forEach var="element" items="${allProducts}">
         <tr>
             <td>${element.title}</td>
             <td>${element.description}</td>

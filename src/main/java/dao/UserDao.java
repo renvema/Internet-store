@@ -18,5 +18,4 @@ public interface UserDao {
     Optional<User> findUserByEmail(String email);
 
     boolean userIsExist(String email, String password);
-
 }

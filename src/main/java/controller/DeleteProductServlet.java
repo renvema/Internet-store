@@ -20,7 +20,7 @@ public class DeleteProductServlet extends HttpServlet {
             throws IOException, ServletException {
         Long id = Long.valueOf(req.getParameter("id"));
         productService.deleteProduct(id);
-        req.setAttribute("allProduct", productService.getAll());
+        req.setAttribute("allProducts", productService.getAll());
         req.getRequestDispatcher("/products.jsp").forward(req, resp);
     }
 }

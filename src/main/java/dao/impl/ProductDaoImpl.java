@@ -23,21 +23,6 @@ public class ProductDaoImpl implements ProductDao {
         return Storage.products;
     }
 
-//    @Override
-//    public Product getProductsById(Long productId) {
-//        for (Product product : Storage.products) {
-//            if (product.getId().equals(productId)) {
-//                return product;
-//            }
-//        }
-//        return null;
-//    }
-//
-//    @Override
-//    public void deleteProduct(Product product) {
-//        Storage.products.remove(product);
-//
-//    }
     public Optional<Product> getProductsById(Long productId) {
         List<Product> allProducts = getAll();
         return allProducts.stream()
@@ -49,7 +34,7 @@ public class ProductDaoImpl implements ProductDao {
         Optional<Product> optionalProduct = getProductsById(id);
         if (optionalProduct.isPresent()) {
             Product product = optionalProduct.get();
-            Storage.users.remove(product);
+            Storage.products.remove(product);
             logger.info(product + " was deleted.");
         } else {
             logger.info("Product not deleted");
