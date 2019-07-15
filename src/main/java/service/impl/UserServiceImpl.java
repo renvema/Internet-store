@@ -31,8 +31,4 @@ public class UserServiceImpl implements UserService {
     public Optional<User> findUserByEmail(String email) {
         return userDao.findUserByEmail(email);
     }
-
-    public boolean userIsExist(String email, String password) {
-        return userDao.userIsExist(email, password);
-    }
 }

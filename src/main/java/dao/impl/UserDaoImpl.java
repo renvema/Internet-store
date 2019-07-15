@@ -26,8 +26,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public Optional<User> getUsersById(Long userId) {
-        List<User> allUsers = getAll();
-        return allUsers.stream()
+        return Storage.users.stream()
                 .filter(user -> user.getId().equals(userId))
                 .findFirst();
     }
@@ -45,19 +44,5 @@ public class UserDaoImpl implements UserDao {
 
     public Optional<User> findUserByEmail(String email) {
         return Storage.users.stream().filter(user -> user.getEmail().equals(email)).findFirst();
-    }
-
-    public boolean userIsExist(String email, String password) {
-
-        boolean result = false;
-
-        for (User user : Storage.users) {
-            if (user.getEmail().equals(email) && user.getPassword().equals(password)) {
-                result = true;
-                break;
-            }
-        }
-
-        return result;
     }
 }

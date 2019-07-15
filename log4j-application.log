@@ -44,3 +44,31 @@
 2019-07-15 10:44:51 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread', price=0.01}added in db
 2019-07-15 10:44:57 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=23.0}added in db
 2019-07-15 10:45:04 INFO  ProductDaoImpl:38 - Product{id=1, title='bread', description='white bread with garlic', price=0.01} was deleted.
+2019-07-15 11:20:45 INFO  UserDaoImpl:19 - User User{id=1, email='test@test.ua', password='test'}added in db
+2019-07-15 11:20:45 INFO  UserDaoImpl:19 - User User{id=2, email='admin@admin.ua', password='admin'}added in db
+2019-07-15 11:20:45 INFO  UserDaoImpl:19 - User User{id=3, email='user@user.ua', password='user'}added in db
+2019-07-15 11:21:06 INFO  UserDaoImpl:19 - User User{id=4, email='renvema@bigmir.net', password='12'}added in db
+2019-07-15 11:21:13 INFO  UserRegistrationServlet:56 - User was changed
+2019-07-15 11:21:15 INFO  UserDaoImpl:39 - User{id=1, email='test@test.ua', password='test'} was deleted.
+2019-07-15 11:21:23 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread', price=3.0}added in db
+2019-07-15 11:21:28 INFO  ProductDaoImpl:38 - Product{id=1, title='bread', description='white bread', price=33.0} was deleted.
+2019-07-15 11:26:49 INFO  UserDaoImpl:19 - User User{id=1, email='test@test.ua', password='test'}added in db
+2019-07-15 11:26:49 INFO  UserDaoImpl:19 - User User{id=2, email='admin@admin.ua', password='admin'}added in db
+2019-07-15 11:26:49 INFO  UserDaoImpl:19 - User User{id=3, email='user@user.ua', password='user'}added in db
+2019-07-15 11:27:11 INFO  UserDaoImpl:19 - User User{id=4, email='renvema@bigmir.net', password='2'}added in db
+2019-07-15 11:27:15 INFO  UserRegistrationServlet:56 - User was changed
+2019-07-15 11:27:18 INFO  UserDaoImpl:39 - User{id=3, email='user@user.ua', password='user'} was deleted.
+2019-07-15 11:27:26 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread', price=3.0}added in db
+2019-07-15 11:27:33 INFO  ProductDaoImpl:18 - Product Product{id=2, title='chockolate', description='with nuts and raison', price=32.0}added in db
+2019-07-15 11:27:38 INFO  ProductDaoImpl:37 - Product{id=1, title='bread', description='white bread', price=3213.0} was deleted.
+2019-07-15 11:29:04 INFO  UserDaoImpl:19 - User User{id=1, email='test@test.ua', password='test'}added in db
+2019-07-15 11:29:04 INFO  UserDaoImpl:19 - User User{id=2, email='admin@admin.ua', password='admin'}added in db
+2019-07-15 11:29:04 INFO  UserDaoImpl:19 - User User{id=3, email='user@user.ua', password='user'}added in db
+2019-07-15 11:30:13 INFO  ProductDaoImpl:18 - Product Product{id=1, title='cheese', description='parmesan', price=54.0}added in db
+2019-07-15 11:30:14 INFO  ProductDaoImpl:37 - Product{id=1, title='cheese', description='parmesan', price=54.0} was deleted.
+2019-07-15 11:44:15 INFO  UserDaoImpl:19 - User User{id=1, email='test@test.ua', password='test'}added in db
+2019-07-15 11:44:15 INFO  UserDaoImpl:19 - User User{id=2, email='admin@admin.ua', password='admin'}added in db
+2019-07-15 11:44:15 INFO  UserDaoImpl:19 - User User{id=3, email='user@user.ua', password='user'}added in db
+2019-07-15 11:44:43 INFO  UserRegistrationServlet:47 - Passwords {t} and {tt} not equals
+2019-07-15 11:44:45 INFO  UserDaoImpl:19 - User User{id=4, email='renvema@bigmir.net', password='t'}added in db
+2019-07-15 11:45:06 INFO  UserRegistrationServlet:56 - User was changed

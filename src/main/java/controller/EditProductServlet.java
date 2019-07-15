@@ -31,7 +31,7 @@ public class EditProductServlet extends HttpServlet {
             req.setAttribute("oldPrice", product.getPrice());
             req.getRequestDispatcher("/edit_product.jsp").forward(req, resp);
         } else {
-            logger.info("Productr is not found");
+            logger.info("Product is not found");
             resp.sendRedirect("/products");
         }
     }

@@ -24,8 +24,7 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     public Optional<Product> getProductsById(Long productId) {
-        List<Product> allProducts = getAll();
-        return allProducts.stream()
+        return Storage.products.stream()
                 .filter(product -> product.getId().equals(productId))
                 .findFirst();
     }
@@ -40,5 +39,4 @@ public class ProductDaoImpl implements ProductDao {
             logger.info("Product not deleted");
         }
     }
-
 }

@@ -16,7 +16,4 @@ public interface UserService {
     void deleteUser(Long id);
 
     Optional<User> findUserByEmail(String email);
-
-    boolean userIsExist(String email, String password);
-
 }

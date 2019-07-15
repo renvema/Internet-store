@@ -1,7 +1,7 @@
 package service.impl;
 
 import dao.ProductDao;
-import dao.impl.ProductDaoImpl;
+import factory.ProductDaoFactory;
 import model.Product;
 import service.ProductService;
 
@@ -10,7 +10,7 @@ import java.util.Optional;
 
 public class ProductServiceImpl implements ProductService {
 
-    private static final ProductDao productDao = new ProductDaoImpl();
+    private static final ProductDao productDao = ProductDaoFactory.getProductDao();
 
     public void addProduct(Product product) {
         productDao.addProduct(product);
@@ -27,5 +27,4 @@ public class ProductServiceImpl implements ProductService {
     public void deleteProduct(Long id) {
         productDao.deleteProduct(id);
     }
-
 }
