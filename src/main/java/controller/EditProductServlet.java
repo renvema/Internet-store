@@ -25,6 +25,7 @@ public class EditProductServlet extends HttpServlet {
         Optional<Product> optProduct = productService.getProductsById(id);
         if (optProduct.isPresent()) {
             Product product = optProduct.get();
+            req.setAttribute("productId", product.getId());
             req.setAttribute("oldTitle", product.getTitle());
             req.setAttribute("oldDescription", product.getDescription());
             req.setAttribute("oldPrice", product.getPrice());

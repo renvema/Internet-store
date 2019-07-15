@@ -18,3 +18,9 @@
 2019-07-15 09:48:03 INFO  UserDaoImpl:19 - User User{id=2, email='admin@admin.ua', password='admin'}added in db
 2019-07-15 09:48:03 INFO  UserDaoImpl:19 - User User{id=3, email='user@user.ua', password='user'}added in db
 2019-07-15 09:48:39 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread ', price=0.01}added in db
+2019-07-15 09:54:58 INFO  UserDaoImpl:19 - User User{id=1, email='test@test.ua', password='test'}added in db
+2019-07-15 09:54:58 INFO  UserDaoImpl:19 - User User{id=2, email='admin@admin.ua', password='admin'}added in db
+2019-07-15 09:54:58 INFO  UserDaoImpl:19 - User User{id=3, email='user@user.ua', password='user'}added in db
+2019-07-15 09:55:26 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread ', price=5.0}added in db
+2019-07-15 09:55:32 INFO  ProductDaoImpl:53 - Product{id=1, title='bread', description='white bread with garlic', price=5.0} was deleted.
+2019-07-15 09:55:33 INFO  ProductDaoImpl:53 - Product{id=1, title='bread', description='white bread with garlic', price=5.0} was deleted.
