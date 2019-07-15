@@ -20,12 +20,14 @@ public class UserRegistrationServlet extends HttpServlet {
     private static final UserService userService = UserServiceFactory.getInstance();
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
         req.getRequestDispatcher("/add_user.jsp").forward(req, resp);
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
         String repeatPassword = req.getParameter("repeatPassword");
@@ -34,9 +36,9 @@ public class UserRegistrationServlet extends HttpServlet {
             req.setAttribute("error", "Empty fields!");
             req.getRequestDispatcher("/add_user.jsp").forward(req, resp);
         } else if (password.equals(repeatPassword)) {
-            User user = new User(IdGenerator.generateIdUser(), email, password, User.ROLE.USER);
+            User user = new User(IdGenerator.generateIdUser(), email, password, "user");
             userService.addUser(user);
-            resp.sendRedirect("/users");
+            resp.sendRedirect("/admin/users");
         } else {
             req.setAttribute("email", email);
             req.setAttribute("error", "You passwords not equals");

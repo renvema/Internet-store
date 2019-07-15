@@ -3,6 +3,7 @@ package dao;
 import model.User;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface UserDao {
 
@@ -10,11 +11,11 @@ public interface UserDao {
 
     List<User> getAll();
 
-    User getUsersById(Long userId);
+    Optional<User> getUsersById(Long userId);
 
-    void deleteUser(User user);
+    void deleteUser(Long id);
 
-    User.ROLE getRoleByLoginPassword(String email, String password);
+    Optional<User> findUserByEmail(String email);
 
     boolean userIsExist(String email, String password);
 

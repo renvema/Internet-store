@@ -19,7 +19,7 @@ public class ProductAddServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        req.getRequestDispatcher("add_product.jsp").forward(req, resp);
+        req.getRequestDispatcher("/add_product.jsp").forward(req, resp);
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)

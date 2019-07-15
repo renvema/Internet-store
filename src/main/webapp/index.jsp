@@ -15,7 +15,7 @@
 Welcome! You can register if you want :-P
 <center>
     <h2>Sign In</h2>
-    <form method="post" action="/signin">
+    <form method="post" action="/login">
         Email:<br>
         <input type="email" name="email" value="">
         <br>

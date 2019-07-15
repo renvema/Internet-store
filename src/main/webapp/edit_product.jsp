@@ -14,17 +14,15 @@
     <title>Title</title>
 </head>
 <body>
-<% List<Product> allProduct = (List<Product>) request.getAttribute("allProduct");
-%>
 
 <center>
     ${valid}
     <h4>Edit product data</h4>
-    <form action="/edit/product" method="post">
+    <form action="/edit/product?id=${productId}" method="post">
         Title <input name="title" type="text" value="${oldTitle}"/> <br>
         Description <input name="description" type="text" value="${oldDescription}"/> <br>
         Price <input name="price" type="number" step="0.01" value="${oldPrice}"/> <br>
-        <button type="submit">Save</button>
+        <input type="submit" value="Save">
     </form>
 
 </center>

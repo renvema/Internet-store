@@ -19,7 +19,7 @@
     <h2> All products </h2>
 
     <button><a href="/add/product"> Add product </a></button>
-    <button><a href="/users">Users</a></button>
+    <button><a href="/admin/users">Users</a></button>
     <table border=1 bgcolor="#dda0dd">
         <tr>
             <th>Title</th>

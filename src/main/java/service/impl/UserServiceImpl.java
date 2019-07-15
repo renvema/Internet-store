@@ -6,6 +6,7 @@ import model.User;
 import service.UserService;
 
 import java.util.List;
+import java.util.Optional;
 
 public class UserServiceImpl implements UserService {
 
@@ -19,20 +20,18 @@ public class UserServiceImpl implements UserService {
         return userDao.getAll();
     }
 
-    public User getUsersById(Long userId) {
+    public Optional<User> getUsersById(Long userId) {
         return userDao.getUsersById(userId);
     }
 
-    public void deleteUser(User user) {
-        userDao.deleteUser(user);
+    public void deleteUser(Long id) {
+        userDao.deleteUser(id);
     }
 
-    @Override
-    public User.ROLE getRoleByLoginPassword(String email, String password) {
-        return userDao.getRoleByLoginPassword(email, password);
+    public Optional<User> findUserByEmail(String email) {
+        return userDao.findUserByEmail(email);
     }
 
-    @Override
     public boolean userIsExist(String email, String password) {
         return userDao.userIsExist(email, password);
     }
