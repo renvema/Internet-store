@@ -20,6 +20,8 @@
         Email <input name="email" type="email" value="${email}"/> <br>
         Password <input name="password" type="password"/> <br>
         Repeat password <input name="repeatPassword" type="password"/> <br>
+        <input name="role" type="radio" value="admin"> admin
+        <input name="role" type="radio" value="user" checked>user
         <button type="submit">Register</button>
     </form>
 

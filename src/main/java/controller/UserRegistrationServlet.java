@@ -31,12 +31,13 @@ public class UserRegistrationServlet extends HttpServlet {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
         String repeatPassword = req.getParameter("repeatPassword");
+        String role = req.getParameter("role");
 
         if (email.isEmpty() || email.isEmpty() || password.isEmpty()) {
             req.setAttribute("error", "Empty fields!");
             req.getRequestDispatcher("/add_user.jsp").forward(req, resp);
         } else if (password.equals(repeatPassword)) {
-            User user = new User(IdGenerator.generateIdUser(), email, password, "user");
+            User user = new User(IdGenerator.generateIdUser(), email, password, role);
             userService.addUser(user);
             resp.sendRedirect("/admin/users");
         } else {

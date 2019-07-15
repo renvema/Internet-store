@@ -72,3 +72,11 @@
 2019-07-15 11:44:43 INFO  UserRegistrationServlet:47 - Passwords {t} and {tt} not equals
 2019-07-15 11:44:45 INFO  UserDaoImpl:19 - User User{id=4, email='renvema@bigmir.net', password='t'}added in db
 2019-07-15 11:45:06 INFO  UserRegistrationServlet:56 - User was changed
+2019-07-15 11:52:40 INFO  UserDaoImpl:19 - User User{id=5, email='erw@wer', password='12'}added in db
+2019-07-15 11:53:25 INFO  UserDaoImpl:19 - User User{id=6, email='test@gmail.comr', password='4'}added in db
+2019-07-15 11:53:37 INFO  UserDaoImpl:39 - User{id=6, email='test@gmail.comr', password='4'} was deleted.
+2019-07-15 11:53:38 INFO  UserDaoImpl:39 - User{id=5, email='erw@wer', password='12'} was deleted.
+2019-07-15 11:56:58 INFO  UserDaoImpl:19 - User User{id=1, email='test@test.ua', password='test'}added in db
+2019-07-15 11:56:58 INFO  UserDaoImpl:19 - User User{id=2, email='admin@admin.ua', password='admin'}added in db
+2019-07-15 11:56:58 INFO  UserDaoImpl:19 - User User{id=3, email='user@user.ua', password='user'}added in db
+2019-07-15 11:57:20 INFO  UserDaoImpl:19 - User User{id=4, email='renvema@bigmir.net', password='2'}added in db
