@@ -5,3 +5,4 @@ out
 .idea/*
 target/*
 web.xml
+*.log
