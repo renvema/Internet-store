@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Optional;
 
-@WebServlet(value = "/edit/product")
+@WebServlet(value = "/admin/edit/product")
 public class EditProductServlet extends HttpServlet {
 
     private static final ProductService productService = ProductServiceFactory.getInstance();

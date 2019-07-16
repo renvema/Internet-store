@@ -18,7 +18,7 @@
 <center>
     ${valid}
     <h4>Edit product data</h4>
-    <form action="/edit/product?id=${productId}" method="post">
+    <form action="/admin/edit/product?id=${productId}" method="post">
         Title <input name="title" type="text" value="${oldTitle}"/> <br>
         Description <input name="description" type="text" value="${oldDescription}"/> <br>
         Price <input name="price" type="number" step="0.01" value="${oldPrice}"/> <br>

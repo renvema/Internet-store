@@ -18,7 +18,7 @@
 
     ${valid}
     <h4>Edit user data</h4>
-    <form action="/edit/user?id=${userId}" method="post">
+    <form action="/admin/edit/user?id=${userId}" method="post">
         Email <input name="email" type="email" value="${oldEmail}"> <br>
         Password <input name="password" type="password" value="${oldPassword}"> <br>
         <input type="submit" value="Save">

@@ -29,7 +29,7 @@
                 <td>${element.password}</td>
                 <td>${element.role}</td>
                 <td>
-                    <button><a href="/edit/user?id=${element.id}">Edit</a></button>
+                    <button><a href="/admin/edit/user?id=${element.id}">Edit</a></button>
                 </td>
                 <td>
                     <button><a href="/delete/user?id=${element.id}">Delete</a></button>

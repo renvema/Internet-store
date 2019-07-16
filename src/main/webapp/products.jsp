@@ -33,7 +33,7 @@
             <td>${element.description}</td>
             <td>${element.price}</td>
             <td>
-                <button><a href="/edit/product?id=${element.id}">Edit</a></button>
+                <button><a href="/admin/edit/product?id=${element.id}">Edit</a></button>
             </td>
             <td>
                 <button><a href="/delete/product?id=${element.id}">Delete</a></button>
