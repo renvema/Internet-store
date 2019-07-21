@@ -1,8 +1,11 @@
 package controller;
 
 import factory.UserServiceFactory;
+import model.Basket;
+import model.Product;
 import model.User;
 import service.UserService;
+import utils.IdGenerator;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Optional;
 
 @WebServlet("/login")
@@ -26,6 +30,9 @@ public class LoginServlet extends HttpServlet {
         if (optUser.isPresent() && optUser.get().getPassword().equals(password)) {
             HttpSession session = req.getSession();
             session.setAttribute("user", optUser.get());
+            Basket basket = new Basket(IdGenerator.generateIdBasket(),
+                    new ArrayList<Product>(), optUser.get());
+            session.setAttribute("basket", basket);
             resp.sendRedirect("/admin/users");
         } else {
             resp.sendRedirect("index.jsp");

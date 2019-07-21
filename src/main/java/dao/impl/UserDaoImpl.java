@@ -16,7 +16,6 @@ public class UserDaoImpl implements UserDao {
     @Override
     public void addUser(User user) {
         Storage.users.add(user);
-        logger.info("User " + user + "added in db");
     }
 
     @Override

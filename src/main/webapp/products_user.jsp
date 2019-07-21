@@ -18,29 +18,27 @@
 <center>
     <h2> All products </h2>
 
-    <button><a href="/add/product"> Add product </a></button>
     <table border=1 bgcolor="#dda0dd">
         <tr>
             <th>Title</th>
             <th>Description</th>
             <th>Price</th>
             <th></th>
-            <th></th>
         </tr>
-        <c:forEach var="element" items="${allProducts}">
+        <c:forEach var="element" items="${products}">
         <tr>
             <td>${element.title}</td>
             <td>${element.description}</td>
             <td>${element.price}</td>
-            <td>
-                <button><a href="/admin/edit/product?id=${element.id}">Edit</a></button>
-            </td>
-            <td>
-                <button><a href="/admin/delete/product?id=${element.id}">Delete</a></button>
-            </td>
+            <td> <form method="post" action="/buy/product?id=${element.id}">
+               <input type="submit" value="Buy">
+            </form></td>
+
         </tr>
         </c:forEach>
         <button><a href="/login"> Started page </a></button>
+        <button><a href="/basket"> Basket </a></button>
+        <h3>${message}</h3>
 </center>
 </table>
 </body>

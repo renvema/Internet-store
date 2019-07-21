@@ -1,7 +1,4 @@
-target
 *.iml
 .idea
-out
-.idea/*
-target/*
-web.xml
+*.log
+*.xml

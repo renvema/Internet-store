@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Objects;
-
 public class User {
 
     private Long id;
@@ -9,15 +7,10 @@ public class User {
     private String password;
     private String role;
 
-    public User(Long id, String email, String password) {
-        this.id = id;
+    public User(String email, String password, String role) {
         this.email = email;
         this.password = password;
-    }
-
-    public User(String email, String password) {
-        this.email = email;
-        this.password = password;
+        this.role = role;
     }
 
     public User(Long id, String email, String password, String role) {
@@ -63,23 +56,22 @@ public class User {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         User user = (User) o;
-        return Objects.equals(id, user.id) &&
-                Objects.equals(email, user.email) &&
-                Objects.equals(password, user.password);
+
+        if (id != null ? !id.equals(user.id) : user.id != null) return false;
+        if (email != null ? !email.equals(user.email) : user.email != null) return false;
+        if (password != null ? !password.equals(user.password) : user.password != null)
+            return false;
+        return role != null ? role.equals(user.role) : user.role == null;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, email, password);
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (role != null ? role.hashCode() : 0);
+        return result;
     }
 }

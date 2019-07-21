@@ -28,7 +28,7 @@ public class AdminFilter implements Filter {
         if (userFromSession != null && userFromSession.getRole().equals("admin")) {
             chain.doFilter(req, resp);
         } else {
-            httpResponse.sendRedirect("/products.jsp");
+            httpResponse.sendRedirect("/buy/product");
         }
     }
 

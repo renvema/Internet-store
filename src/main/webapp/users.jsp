@@ -18,6 +18,7 @@
 
     <button><a href="/add/user"> Add user </a></button>
     <button><a href="/products">Products</a></button>
+    <button><a href="/login"> Started page </a></button>
     <table border=1 bgcolor="#dda0dd">
         <tr>
             <th>Email</th>
@@ -29,10 +30,10 @@
                 <td>${element.password}</td>
                 <td>${element.role}</td>
                 <td>
-                    <button><a href="/edit/user?id=${element.id}">Edit</a></button>
+                    <button><a href="/admin/edit/user?id=${element.id}">Edit</a></button>
                 </td>
                 <td>
-                    <button><a href="/delete/user?id=${element.id}">Delete</a></button>
+                    <button><a href="/admin/delete/user?id=${element.id}">Delete</a></button>
                 </td>
             </tr>
         </c:forEach>

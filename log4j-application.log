@@ -80,3 +80,433 @@
 2019-07-15 11:56:58 INFO  UserDaoImpl:19 - User User{id=2, email='admin@admin.ua', password='admin'}added in db
 2019-07-15 11:56:58 INFO  UserDaoImpl:19 - User User{id=3, email='user@user.ua', password='user'}added in db
 2019-07-15 11:57:20 INFO  UserDaoImpl:19 - User User{id=4, email='renvema@bigmir.net', password='2'}added in db
+2019-07-16 12:42:52 INFO  UserDaoImpl:19 - User User{id=1, email='test@test.ua', password='test'}added in db
+2019-07-16 12:42:52 INFO  UserDaoImpl:19 - User User{id=2, email='admin@admin.ua', password='admin'}added in db
+2019-07-16 12:42:52 INFO  UserDaoImpl:19 - User User{id=3, email='user@user.ua', password='user'}added in db
+2019-07-16 12:43:19 INFO  UserRegistrationServlet:56 - User was changed
+2019-07-16 21:51:07 INFO  UserDaoImpl:19 - User User{id=1, email='test@test.ua', password='test'}added in db
+2019-07-16 21:51:07 INFO  UserDaoImpl:19 - User User{id=2, email='admin@admin.ua', password='admin'}added in db
+2019-07-16 21:51:07 INFO  UserDaoImpl:19 - User User{id=3, email='user@user.ua', password='user'}added in db
+2019-07-16 21:52:13 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread', price=45.0}added in db
+2019-07-16 21:52:19 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=5.0}added in db
+2019-07-16 21:52:26 INFO  ProductDaoImpl:18 - Product Product{id=3, title='chockolate', description='with nuts and raison', price=3.0}added in db
+2019-07-16 21:54:07 INFO  ProductDaoImpl:18 - Product Product{id=4, title='bread', description='white bread', price=23.0}added in db
+2019-07-16 21:58:36 INFO  UserDaoImpl:19 - User User{id=1, email='test@test.ua', password='test'}added in db
+2019-07-16 21:58:36 INFO  UserDaoImpl:19 - User User{id=2, email='admin@admin.ua', password='admin'}added in db
+2019-07-16 21:58:36 INFO  UserDaoImpl:19 - User User{id=3, email='user@user.ua', password='user'}added in db
+2019-07-16 22:00:14 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread', price=5.0}added in db
+2019-07-16 22:00:29 INFO  ProductDaoImpl:18 - Product Product{id=2, title='bread', description='white bread', price=5.0}added in db
+2019-07-16 22:03:17 INFO  UserDaoImpl:19 - User User{id=1, email='test@test.ua', password='test'}added in db
+2019-07-16 22:03:17 INFO  UserDaoImpl:19 - User User{id=2, email='admin@admin.ua', password='admin'}added in db
+2019-07-16 22:03:17 INFO  UserDaoImpl:19 - User User{id=3, email='user@user.ua', password='user'}added in db
+2019-07-16 22:03:47 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread', price=23.0}added in db
+2019-07-16 22:03:53 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=3.0}added in db
+2019-07-16 22:33:31 INFO  UserDaoImpl:19 - User User{id=1, email='test@test.ua', password='test'}added in db
+2019-07-16 22:33:31 INFO  UserDaoImpl:19 - User User{id=2, email='admin@admin.ua', password='admin'}added in db
+2019-07-16 22:33:31 INFO  UserDaoImpl:19 - User User{id=3, email='user@user.ua', password='user'}added in db
+2019-07-16 22:34:11 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread', price=5.0}added in db
+2019-07-16 22:34:26 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=23.0}added in db
+2019-07-17 09:16:02 INFO  UserDaoImpl:19 - User model.User@a2168d99added in db
+2019-07-17 09:16:02 INFO  UserDaoImpl:19 - User model.User@7baac46added in db
+2019-07-17 09:16:02 INFO  UserDaoImpl:19 - User model.User@3ca66ac9added in db
+2019-07-17 09:17:30 INFO  UserDaoImpl:19 - User model.User@a2168d99added in db
+2019-07-17 09:17:30 INFO  UserDaoImpl:19 - User model.User@7baac46added in db
+2019-07-17 09:17:30 INFO  UserDaoImpl:19 - User model.User@3ca66ac9added in db
+2019-07-17 09:18:24 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=4.0}added in db
+2019-07-17 09:27:48 INFO  UserDaoImpl:19 - User model.User@a2168d99added in db
+2019-07-17 09:27:48 INFO  UserDaoImpl:19 - User model.User@7baac46added in db
+2019-07-17 09:27:48 INFO  UserDaoImpl:19 - User model.User@3ca66ac9added in db
+2019-07-17 09:28:59 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=23.0}added in db
+2019-07-18 09:29:56 INFO  UserDaoImpl:19 - User model.User@a2168d99added in db
+2019-07-18 09:29:56 INFO  UserDaoImpl:19 - User model.User@7baac46added in db
+2019-07-18 09:29:56 INFO  UserDaoImpl:19 - User model.User@3ca66ac9added in db
+2019-07-18 09:30:21 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread', price=5.0}added in db
+2019-07-18 09:31:09 INFO  ProductDaoImpl:18 - Product Product{id=2, title='chockolate', description='with nuts and raison', price=7.0}added in db
+2019-07-18 10:12:07 INFO  UserDaoImpl:19 - User model.User@a2168d99added in db
+2019-07-18 10:12:07 INFO  UserDaoImpl:19 - User model.User@7baac46added in db
+2019-07-18 10:12:07 INFO  UserDaoImpl:19 - User model.User@3ca66ac9added in db
+2019-07-18 10:12:47 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread', price=6.0}added in db
+2019-07-18 10:19:03 INFO  UserDaoImpl:19 - User model.User@a2168d99added in db
+2019-07-18 10:19:03 INFO  UserDaoImpl:19 - User model.User@7baac46added in db
+2019-07-18 10:19:03 INFO  UserDaoImpl:19 - User model.User@3ca66ac9added in db
+2019-07-18 10:19:32 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread', price=4.0}added in db
+2019-07-18 10:26:28 INFO  UserDaoImpl:19 - User model.User@a2168d99added in db
+2019-07-18 10:26:28 INFO  UserDaoImpl:19 - User model.User@7baac46added in db
+2019-07-18 10:26:28 INFO  UserDaoImpl:19 - User model.User@3ca66ac9added in db
+2019-07-18 10:26:49 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread', price=4.0}added in db
+2019-07-18 10:51:33 INFO  UserDaoImpl:19 - User model.User@a2168d99added in db
+2019-07-18 10:51:33 INFO  UserDaoImpl:19 - User model.User@7baac46added in db
+2019-07-18 10:51:33 INFO  UserDaoImpl:19 - User model.User@3ca66ac9added in db
+2019-07-18 15:12:10 INFO  UserDaoImpl:19 - User model.User@2e84db47added in db
+2019-07-18 15:12:10 INFO  UserDaoImpl:19 - User model.User@efbbb2faadded in db
+2019-07-18 15:12:10 INFO  UserDaoImpl:19 - User model.User@e0ec9817added in db
+2019-07-18 15:12:36 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread', price=23.0}added in db
+2019-07-18 15:31:21 INFO  UserDaoImpl:19 - User model.User@58aeb810added in db
+2019-07-18 15:31:36 INFO  UserRegistrationServlet:56 - User was changed
+2019-07-18 15:31:39 INFO  UserDaoImpl:39 - model.User@2e84db47 was deleted.
+2019-07-18 15:40:29 INFO  UserDaoImpl:19 - User model.User@2e84db47added in db
+2019-07-18 15:40:29 INFO  UserDaoImpl:19 - User model.User@efbbb2faadded in db
+2019-07-18 15:40:29 INFO  UserDaoImpl:19 - User model.User@e0ec9817added in db
+2019-07-18 15:54:15 ERROR DbConnector:23 - problem with connection to db
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:958)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2316)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at utils.DbConnector.connect(DbConnector.java:20)
+	at dao.impl.UserDaoImpl.addUser(UserDaoImpl.java:22)
+	at dao.impl.UserDaoImpl.main(UserDaoImpl.java:64)
+Caused by: java.lang.NullPointerException
+	at com.mysql.jdbc.ConnectionImpl.getServerCharset(ConnectionImpl.java:2989)
+	at com.mysql.jdbc.MysqlIO.sendConnectionAttributes(MysqlIO.java:1873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1802)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	... 16 more
+2019-07-18 15:54:15 INFO  UserDaoImpl:27 - User model.User@2d8f2497added in db
+2019-07-18 17:16:22 ERROR DbConnector:23 - problem with connection to db
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:958)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2316)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at utils.DbConnector.connect(DbConnector.java:20)
+	at dao.impl.UserDaoImpl.addUser(UserDaoImpl.java:22)
+	at dao.impl.UserDaoImpl.main(UserDaoImpl.java:64)
+Caused by: java.lang.NullPointerException
+	at com.mysql.jdbc.ConnectionImpl.getServerCharset(ConnectionImpl.java:2989)
+	at com.mysql.jdbc.MysqlIO.sendConnectionAttributes(MysqlIO.java:1873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1802)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	... 16 more
+2019-07-18 17:16:22 INFO  UserDaoImpl:27 - User model.User@2d8f2497added in db
+2019-07-18 17:17:50 INFO  UserDaoImpl:27 - User model.User@2d8f2497added in db
+2019-07-18 17:33:03 INFO  UserDaoImpl:39 - model.User@2e84db47 was deleted.
+2019-07-18 17:35:52 ERROR DbConnector:23 - problem with connection to db
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:958)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2316)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at utils.DbConnector.connect(DbConnector.java:20)
+	at dao.impl.UserDaoImpl.addUser(UserDaoImpl.java:22)
+	at dao.impl.UserDaoImpl.main(UserDaoImpl.java:64)
+Caused by: java.lang.NullPointerException
+	at com.mysql.jdbc.ConnectionImpl.getServerCharset(ConnectionImpl.java:2989)
+	at com.mysql.jdbc.MysqlIO.sendConnectionAttributes(MysqlIO.java:1873)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1802)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	... 16 more
+2019-07-18 17:35:52 INFO  UserDaoImpl:27 - User model.User@2d8f2497added in db
+2019-07-18 18:17:30 ERROR DbConnector:23 - problem with connection to db
+java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:332)
+	at utils.DbConnector.connect(DbConnector.java:19)
+	at dao.impl.UserDaoImpl.addUser(UserDaoImpl.java:22)
+	at dao.impl.UserDaoImpl.main(UserDaoImpl.java:64)
+2019-07-18 18:17:30 INFO  UserDaoImpl:27 - User model.User@2d8f2497added in db
+2019-07-18 18:20:40 INFO  UserDaoImpl:27 - User model.User@2d8f2497added in db
+2019-07-18 18:21:26 ERROR DbConnector:23 - problem with connection to db
+java.lang.ClassNotFoundException: `com.mysql.cj.jdbc.Driver
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:332)
+	at utils.DbConnector.connect(DbConnector.java:19)
+	at dao.impl.UserDaoImpl.addUser(UserDaoImpl.java:22)
+	at dao.impl.UserDaoImpl.main(UserDaoImpl.java:64)
+2019-07-18 18:21:26 INFO  UserDaoImpl:27 - User model.User@2d8f2497added in db
+2019-07-18 18:21:50 INFO  UserDaoImpl:27 - User model.User@2d8f2497added in db
+2019-07-18 18:27:09 INFO  UserDaoImpl:27 - User model.User@2d8f2497added in db
+2019-07-18 18:28:26 INFO  UserDaoImpl:27 - User model.User@2d8f2497added in db
+2019-07-18 18:39:02 INFO  UserDaoImpl:30 - User model.User@1ea101a9added in db
+2019-07-18 18:50:37 INFO  UserDaoImpl:30 - User model.User@1ea101a9added in db
+2019-07-18 18:51:42 INFO  UserDaoImpl:30 - User model.User@2da7ffb4added in db
+2019-07-18 20:31:46 INFO  UserDaoImpl:30 - User model.User@efbbb2faadded in db
+2019-07-18 20:31:46 INFO  UserDaoImpl:30 - User model.User@e0ec9817added in db
+2019-07-19 15:40:16 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=34.0}added in db
+2019-07-19 16:03:00 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=23.0}added in db
+2019-07-19 16:03:08 INFO  ProductDaoImpl:18 - Product Product{id=2, title='chockolate', description='with nuts and raison', price=34.0}added in db
+2019-07-19 17:20:03 INFO  UserRegistrationServlet:56 - User was changed
+2019-07-19 17:20:30 INFO  UserDaoImpl:53 - model.User@e90f19e4 was deleted.
+2019-07-19 17:22:35 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread', price=4.0}added in db
+2019-07-19 17:22:40 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=2.0}added in db
+2019-07-19 17:23:09 INFO  UserDaoImpl:53 - model.User@340ade96 was deleted.
+2019-07-19 17:23:13 INFO  UserRegistrationServlet:56 - User was changed
+2019-07-19 17:27:49 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread', price=0.01}added in db
+2019-07-19 17:31:31 INFO  ProductDaoImpl:18 - Product Product{id=1, title='Bread', description='White bread with garlic', price=12.5}added in db
+2019-07-19 17:33:02 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-19 17:33:02 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-19 19:43:49 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-19 19:43:49 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-19 19:50:27 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-19 19:50:27 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-19 20:06:46 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-19 20:06:46 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-19 20:10:55 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-19 20:10:55 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-19 20:12:37 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-19 20:12:37 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-19 20:14:05 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-19 20:14:05 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-19 20:15:19 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-19 20:15:19 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 10:32:01 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 10:32:01 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 10:33:36 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 10:33:36 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 10:38:46 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 10:38:46 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 10:43:54 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 10:43:54 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 10:44:47 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 10:44:47 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 10:45:37 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 10:45:37 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 10:47:06 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 10:47:06 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 11:00:26 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 11:00:26 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 11:06:12 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 11:06:12 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 11:07:27 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 11:07:27 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 11:07:59 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 11:07:59 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 11:08:49 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 11:08:49 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 11:12:04 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 11:12:04 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 11:22:36 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 11:22:36 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 11:24:50 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 11:24:50 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 14:53:16 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 14:53:16 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 14:54:09 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 14:54:09 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 14:58:25 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 14:58:25 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 15:00:41 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 15:00:41 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 15:01:03 INFO  Basket:28 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in your basket
+2019-07-20 15:01:22 INFO  Basket:28 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in your basket
+2019-07-20 15:01:23 INFO  Basket:28 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in your basket
+2019-07-20 15:01:24 INFO  Basket:28 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in your basket
+2019-07-20 23:25:12 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 23:25:12 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 23:29:19 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 23:29:19 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 23:32:36 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 23:32:36 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 23:39:24 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 23:39:24 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 23:39:46 INFO  Basket:28 - Product breadadded in your basket
+2019-07-20 23:42:35 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 23:42:35 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 23:43:00 INFO  Basket:28 - Product breadadded in your basket
+2019-07-20 23:45:20 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-20 23:45:20 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-20 23:45:38 INFO  Basket:28 - Product breadadded in your basket
+2019-07-21 08:34:07 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 08:34:07 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 08:35:20 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 08:35:20 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 08:37:18 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 08:37:18 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 09:03:21 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 09:03:21 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 09:12:44 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 09:12:44 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 09:20:19 INFO  Basket:28 - Product breadadded in your basket
+2019-07-21 09:20:19 INFO  Basket:28 - Product breadadded in your basket
+2019-07-21 09:20:19 INFO  Basket:28 - Product cheeseadded in your basket
+2019-07-21 09:22:58 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 09:22:58 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 09:25:24 INFO  Basket:34 - Product breadadded in your basket
+2019-07-21 09:25:28 INFO  Basket:34 - Product cheeseadded in your basket
+2019-07-21 09:41:07 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 09:41:07 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 09:42:27 INFO  Basket:34 - Product breadadded in your basket
+2019-07-21 09:44:40 INFO  Basket:34 - Product cheeseadded in your basket
+2019-07-21 09:54:24 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 09:54:24 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 09:55:59 INFO  Basket:34 - Product breadadded in your basket
+2019-07-21 13:29:24 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 13:29:25 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 13:30:22 INFO  ProductDaoImpl:18 - Product Product{id=3, title='chockolate', description='with nuts and raison', price=23.0}added in db
+2019-07-21 13:41:09 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 13:41:09 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 13:43:13 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 13:43:13 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 13:43:35 INFO  ProductDaoImpl:36 - Optional.empty is null.
+2019-07-21 13:43:36 INFO  ProductDaoImpl:23 - Product breaddon't added in your basket
+2019-07-21 19:04:26 INFO  UserDaoImpl:30 - User model.User@2da7ffb4added in db
+2019-07-21 19:11:49 INFO  ProductDaoImpl:27 - Product Product{id=null, title='test', description='fds', price=22.5}added in db
+2019-07-21 19:11:49 INFO  ProductDaoImpl:31 - Product Product{id=null, title='test', description='fds', price=22.5}added in db
+2019-07-21 19:12:29 INFO  ProductDaoImpl:27 - Product Product{id=null, title='test', description='fds', price=22.5}added in db
+2019-07-21 19:12:29 INFO  ProductDaoImpl:31 - Product Product{id=null, title='test', description='fds', price=22.5}added in db
+2019-07-21 19:12:46 INFO  ProductDaoImpl:27 - Product Product{id=null, title='test', description='fds', price=22.5}added in db
+2019-07-21 19:12:46 INFO  ProductDaoImpl:31 - Product Product{id=null, title='test', description='fds', price=22.5}added in db
+2019-07-21 19:13:06 INFO  ProductDaoImpl:27 - Product Product{id=null, title='test', description='fds', price=22.5}added in db
+2019-07-21 19:13:06 INFO  ProductDaoImpl:31 - Product Product{id=null, title='test', description='fds', price=22.5}added in db
+2019-07-21 19:14:40 INFO  ProductDaoImpl:27 - Product Product{id=null, title='test', description='fds', price=22.5}added in db
+2019-07-21 19:14:40 INFO  ProductDaoImpl:31 - Product Product{id=null, title='test', description='fds', price=22.5}added in db
+2019-07-21 19:25:37 INFO  ProductDaoImpl:28 - Product Product{id=null, title='test', description='fds', price=22.5}added in db
+2019-07-21 19:25:37 INFO  ProductDaoImpl:32 - Product Product{id=null, title='test', description='fds', price=22.5}added in db
+2019-07-21 19:33:15 INFO  ProductDaoImpl:32 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 19:33:15 INFO  ProductDaoImpl:32 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 19:42:44 INFO  ProductDaoImpl:29 - Product Product{id=null, title='test', description='fds', price=22.5}added in db
+2019-07-21 19:42:44 INFO  ProductDaoImpl:33 - Product Product{id=null, title='test', description='fds', price=22.5}added in db
+2019-07-21 19:43:33 INFO  ProductDaoImpl:30 - Product Product{id=null, title='test', description='fds', price=22.5}added in db
+2019-07-21 19:43:33 INFO  ProductDaoImpl:34 - Product Product{id=null, title='test', description='fds', price=22.5}added in db
+2019-07-21 19:54:03 INFO  ProductDaoImpl:35 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 19:54:03 INFO  ProductDaoImpl:35 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 19:54:14 INFO  ProductDaoImpl:36 - Optional.empty is null.
+2019-07-21 19:54:14 INFO  ProductDaoImpl:23 - Product breaddon't added in your basket
+2019-07-21 19:55:18 INFO  ProductDaoImpl:36 - Optional.empty is null.
+2019-07-21 19:55:18 INFO  ProductDaoImpl:23 - Product breaddon't added in your basket
+2019-07-21 20:13:32 INFO  ProductDaoImpl:35 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 20:13:32 INFO  ProductDaoImpl:35 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 20:18:10 INFO  ProductDaoImpl:36 - Optional.empty is null.
+2019-07-21 20:18:16 INFO  ProductDaoImpl:36 - Optional.empty is null.
+2019-07-21 20:19:06 INFO  ProductDaoImpl:35 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 20:19:06 INFO  ProductDaoImpl:35 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 20:19:21 INFO  ProductDaoImpl:36 - Optional.empty is null.
+2019-07-21 22:00:28 INFO  ProductDaoImpl:35 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 22:00:28 INFO  ProductDaoImpl:35 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 22:00:45 INFO  ProductDaoImpl:36 - Optional.empty is null.
+2019-07-21 22:00:45 INFO  ProductDaoImpl:23 - Product breaddon't added in your basket
+2019-07-21 22:04:04 INFO  ProductDaoImpl:35 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 22:04:04 INFO  ProductDaoImpl:35 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 22:04:41 INFO  ProductDaoImpl:36 - Optional.empty is null.
+2019-07-21 22:04:41 INFO  ProductDaoImpl:23 - Product breaddon't added in your basket
+2019-07-21 22:06:51 INFO  ProductDaoImpl:35 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 22:06:51 INFO  ProductDaoImpl:35 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 22:07:23 INFO  ProductDaoImpl:36 - Optional.empty is null.
+2019-07-21 22:07:23 INFO  ProductDaoImpl:23 - Product breaddon't added in your basket
+2019-07-21 22:08:48 INFO  ProductDaoImpl:35 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 22:08:48 INFO  ProductDaoImpl:35 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 22:10:00 INFO  ProductDaoImpl:36 - Optional.empty is null.
+2019-07-21 22:10:00 INFO  ProductDaoImpl:23 - Product breaddon't added in your basket
+2019-07-21 22:10:47 INFO  ProductDaoImpl:35 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 22:10:47 INFO  ProductDaoImpl:35 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 22:10:55 INFO  ProductDaoImpl:35 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 22:10:55 INFO  ProductDaoImpl:35 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 22:12:32 INFO  ProductDaoImpl:35 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 22:12:32 INFO  ProductDaoImpl:35 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 22:22:06 INFO  ProductDaoImpl:36 - Optional.empty is null.
+2019-07-21 22:22:06 INFO  ProductDaoImpl:23 - Product breaddon't added in your basket
+2019-07-21 22:22:31 INFO  ProductDaoImpl:35 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 22:22:31 INFO  ProductDaoImpl:35 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 22:22:42 INFO  ProductDaoImpl:43 - Optional.empty is null.
+2019-07-21 22:22:42 INFO  ProductDaoImpl:30 - Product breaddon't added in your basket
+2019-07-21 22:24:42 INFO  ProductDaoImpl:35 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 22:24:42 INFO  ProductDaoImpl:35 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 22:29:56 INFO  ProductDaoImpl:36 - Optional.empty is null.
+2019-07-21 22:29:56 INFO  ProductDaoImpl:23 - Product breaddon't added in your basket
+2019-07-21 22:30:25 INFO  ProductDaoImpl:35 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 22:30:25 INFO  ProductDaoImpl:35 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 22:30:35 INFO  ProductDaoImpl:21 - Product breadadded in your basket
+2019-07-21 22:34:28 INFO  ProductDaoImpl:35 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 22:34:28 INFO  ProductDaoImpl:35 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 22:37:38 INFO  ProductDaoImpl:36 - Optional.empty is null.
+2019-07-21 22:37:38 INFO  ProductDaoImpl:23 - Product breaddon't added in your basket
+2019-07-21 22:57:15 INFO  ProductDaoImpl:35 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 22:57:15 INFO  ProductDaoImpl:35 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 23:01:59 INFO  ProductDaoImpl:36 - Optional.empty is null.
+2019-07-21 23:01:59 INFO  ProductDaoImpl:23 - Product breaddon't added in your basket
+2019-07-21 23:02:25 INFO  ProductDaoImpl:35 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 23:02:25 INFO  ProductDaoImpl:35 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 23:02:38 INFO  ProductDaoImpl:36 - Optional.empty is null.
+2019-07-21 23:02:38 INFO  ProductDaoImpl:23 - Product cheesedon't added in your basket
+2019-07-21 23:03:31 INFO  ProductDaoImpl:35 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 23:03:31 INFO  ProductDaoImpl:35 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 23:10:39 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 23:10:39 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 23:10:54 INFO  Basket:34 - Product breadadded in your basket
+2019-07-21 23:12:14 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 23:12:14 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 23:12:29 INFO  Basket:34 - Product breadadded in your basket
+2019-07-21 23:20:05 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 23:20:05 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 23:20:20 INFO  Basket:34 - Product breadadded in your basket
+2019-07-21 23:25:31 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 23:25:31 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 23:25:41 INFO  Basket:34 - Product breadadded in your basket
+2019-07-21 23:31:35 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-21 23:31:35 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-21 23:31:45 INFO  Basket:34 - Product cheeseadded in your basket

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Optional;
 
-@WebServlet(value = "/edit/user")
+@WebServlet(value = "/admin/edit/user")
 public class EditUserServlet extends HttpServlet {
 
     private static final UserService userService = UserServiceFactory.getInstance();

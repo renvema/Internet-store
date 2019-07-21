@@ -4,6 +4,7 @@ public class IdGenerator {
 
     private static Long userID = 0L;
     private static Long productID = 0L;
+    private static Long basketID = 0L;
 
     public static Long generateIdUser() {
         userID++;
@@ -13,5 +14,10 @@ public class IdGenerator {
     public static Long generateIdProdut() {
         productID++;
         return productID;
+    }
+
+    public static Long generateIdBasket() {
+        basketID++;
+        return basketID;
     }
 }
