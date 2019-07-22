@@ -32,6 +32,7 @@ public class ByProductsServlet extends HttpServlet {
             req.setAttribute("message", "Product add in your basket");
             HttpSession session = req.getSession();
             session.setAttribute("basket", basket);
+            req.setAttribute("size", basket.getSize());
             req.setAttribute("products", Storage.products);
             req.getRequestDispatcher("/products_user.jsp").forward(req, resp);
         } else {

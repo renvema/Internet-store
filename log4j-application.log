@@ -510,3 +510,78 @@ java.lang.ClassNotFoundException: `com.mysql.cj.jdbc.Driver
 2019-07-21 23:31:35 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
 2019-07-21 23:31:35 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
 2019-07-21 23:31:45 INFO  Basket:34 - Product cheeseadded in your basket
+2019-07-22 08:02:07 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 08:02:07 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 08:03:00 INFO  UserRegistrationServlet:56 - User was changed
+2019-07-22 08:03:03 INFO  UserDaoImpl:38 - model.User@d8aeecf5 was deleted.
+2019-07-22 08:03:13 INFO  ProductDaoImpl:18 - Product Product{id=3, title='cheese', description='parmesan', price=67.0}added in db
+2019-07-22 08:03:29 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 08:03:30 INFO  Basket:33 - Product chockolateadded in your basket
+2019-07-22 08:11:41 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 08:11:41 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 08:11:51 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 08:11:54 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 08:11:55 INFO  Basket:33 - Product cheeseadded in your basket
+2019-07-22 08:11:57 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 08:13:13 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 08:13:13 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 08:13:24 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 08:13:26 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 08:13:28 INFO  Basket:33 - Product cheeseadded in your basket
+2019-07-22 08:13:28 INFO  Basket:33 - Product cheeseadded in your basket
+2019-07-22 08:13:29 INFO  Basket:33 - Product cheeseadded in your basket
+2019-07-22 08:13:29 INFO  Basket:33 - Product cheeseadded in your basket
+2019-07-22 08:13:29 INFO  Basket:33 - Product cheeseadded in your basket
+2019-07-22 08:13:29 INFO  Basket:33 - Product cheeseadded in your basket
+2019-07-22 08:13:29 INFO  Basket:33 - Product cheeseadded in your basket
+2019-07-22 08:13:30 INFO  Basket:33 - Product cheeseadded in your basket
+2019-07-22 08:13:36 INFO  Basket:33 - Product cheeseadded in your basket
+2019-07-22 08:13:36 INFO  Basket:33 - Product cheeseadded in your basket
+2019-07-22 08:13:36 INFO  Basket:33 - Product cheeseadded in your basket
+2019-07-22 08:13:36 INFO  Basket:33 - Product cheeseadded in your basket
+2019-07-22 08:15:20 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 08:15:20 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 08:16:08 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 08:18:48 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 08:18:48 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 08:19:24 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 08:28:01 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 08:28:01 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 08:28:31 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 08:32:36 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 08:32:36 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 08:47:40 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 08:47:40 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 08:48:01 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 08:52:02 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 08:52:02 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 08:52:18 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 08:52:36 INFO  MailServiceImpl:53 - 5763 was send touser@user.ua
+2019-07-22 08:54:36 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 08:54:36 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 08:54:50 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 08:55:08 INFO  MailServiceImpl:53 - 2133 was send touser@user.ua
+2019-07-22 08:56:51 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 08:56:51 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 08:57:04 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 08:57:19 INFO  MailServiceImpl:53 - 2071 was send touser@user.ua
+2019-07-22 09:03:21 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 09:03:21 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 09:03:29 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 09:03:36 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 09:03:47 INFO  MailServiceImpl:53 - -265 was send touser@user.ua
+2019-07-22 09:07:34 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 09:07:34 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 09:08:36 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 09:17:20 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 09:17:20 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 09:17:58 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 09:18:17 INFO  MailServiceImpl:53 - 4677 was send touser@user.ua
+2019-07-22 09:21:51 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 09:21:51 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 09:22:19 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 09:23:00 INFO  MailServiceImpl:53 - 1707 was send touser@user.ua
+2019-07-22 09:33:34 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 09:33:34 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 09:33:48 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 09:34:05 INFO  MailServiceImpl:53 - 3990 was send touser@user.ua

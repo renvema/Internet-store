@@ -18,7 +18,6 @@ public class BasketServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)

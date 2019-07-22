@@ -6,7 +6,6 @@ import model.Code;
 import model.Order;
 import model.User;
 import service.MailService;
-import utils.RandomHelper;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,26 +31,18 @@ public class OrderServlet extends HttpServlet {
         String city = req.getParameter("city");
         String adress = req.getParameter("adress");
         String phone = req.getParameter("phone");
-        String enteredCode = req.getParameter("code");
         if (surname.isEmpty() || name.isEmpty() || city.isEmpty() || adress.isEmpty()
-                || phone.isEmpty() || enteredCode.isEmpty()) {
+                || phone.isEmpty()) {
             req.setAttribute("valid", "The fields is valid");
             req.getRequestDispatcher("/order.jsp").forward(req, resp);
         } else {
             User user = (User) req.getSession().getAttribute("user");
-            Code code = new Code(RandomHelper.getFourDigitCode());
+            Code code = new Code(user);
             Basket basket = (Basket) req.getSession().getAttribute("basket");
             Order order = new Order(user, basket, code, name, surname, city, adress, phone);
+            req.getSession().setAttribute("order", order);
             mailService.sendConfirmCode(order);
-            if (user == order.getUser()) {
-                if (enteredCode.equals(code.getCode())) {
-                    req.setAttribute("ok", "Your buying is successful.");
-                    req.getRequestDispatcher("/order.jsp").forward(req, resp);
-                } else {
-                    req.setAttribute("wrongCode", "The code is wrong. Try again");
-                    resp.sendRedirect("/");
-                }
-            }
+            resp.sendRedirect("/confirm");
         }
     }
 }

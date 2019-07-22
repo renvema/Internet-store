@@ -33,6 +33,10 @@ public class Basket {
         logger.info("Product " + product.getTitle() + "added in your basket");
     }
 
+    public int getSize() {
+        return products.size();
+    }
+
     public List<Product> getProducts() {
         return products;
     }

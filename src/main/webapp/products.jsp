@@ -14,7 +14,6 @@
     <title>Список продуктов</title>
 </head>
 <body>
-
 <center>
     <h2> All products </h2>
 

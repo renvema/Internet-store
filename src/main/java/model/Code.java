@@ -1,16 +1,14 @@
 package model;
 
+import utils.RandomHelper;
+
 public class Code {
     private String code;
     private User user;
 
-    public Code(String code, User user) {
-        this.code = code;
+    public Code(User user) {
+        this.code = RandomHelper.getFourDigitCode();
         this.user = user;
-    }
-
-    public Code(String code) {
-        this.code = code;
     }
 
     public String getCode() {

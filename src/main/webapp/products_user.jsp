@@ -1,7 +1,5 @@
-<%@ page import="java.io.PrintWriter" %>
-<%@ page import="model.Product" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page import="java.util.List" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: Maryana
   Date: 05.07.2019
@@ -30,15 +28,17 @@
             <td>${element.title}</td>
             <td>${element.description}</td>
             <td>${element.price}</td>
-            <td> <form method="post" action="/buy/product?id=${element.id}">
-               <input type="submit" value="Buy">
-            </form></td>
-
+            <td>
+                <form method="post" action="/buy/product?id=${element.id}">
+                    <input type="submit" value="Buy">
+                </form>
+            </td>
         </tr>
         </c:forEach>
         <button><a href="/login"> Started page </a></button>
         <button><a href="/basket"> Basket </a></button>
         <h3>${message}</h3>
+        <p>Counter product ${size} <br>
 </center>
 </table>
 </body>

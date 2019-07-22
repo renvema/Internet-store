@@ -1,8 +1,10 @@
 package utils;
 
+import java.util.Random;
+
 public class RandomHelper {
 
     public static String getFourDigitCode() {
-        return String.valueOf((int) (Math.random() * 8999) - 1000);
+        return String.valueOf(new Random().nextInt(9000) + 1000);
     }
 }

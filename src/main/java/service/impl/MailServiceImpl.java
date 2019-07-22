@@ -47,7 +47,7 @@ public class MailServiceImpl implements MailService {
                     InternetAddress.parse(order.getUser().getEmail())
             );
             message.setSubject("Don't show your code anybody: ");
-            message.setText(RandomHelper.getFourDigitCode());
+            message.setText(order.getCode().getCode());
 
             Transport.send(message);
             logger.info(RandomHelper.getFourDigitCode() + " was send to" + order.getUser().getEmail());
