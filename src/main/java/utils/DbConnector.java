@@ -31,7 +31,6 @@ public class DbConnector {
             Class.forName(DRIVER);
             return DriverManager.getConnection(DB_URL, login, password);
         } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
             logger.error("problem with connection to db", e);
         }
         return null;

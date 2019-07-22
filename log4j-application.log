@@ -585,3 +585,12 @@ java.lang.ClassNotFoundException: `com.mysql.cj.jdbc.Driver
 2019-07-22 09:33:34 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
 2019-07-22 09:33:48 INFO  Basket:33 - Product breadadded in your basket
 2019-07-22 09:34:05 INFO  MailServiceImpl:53 - 3990 was send touser@user.ua
+2019-07-22 11:12:46 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 11:12:46 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 11:13:42 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 11:13:43 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 11:14:26 INFO  MailServiceImpl:53 - 6129 was send torenvema@bigmir.net
+2019-07-22 11:55:53 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 11:55:53 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 11:58:32 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 11:58:32 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
