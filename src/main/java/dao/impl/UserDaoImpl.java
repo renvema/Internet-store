@@ -12,7 +12,6 @@ public class UserDaoImpl implements UserDao {
 
     private static final Logger logger = Logger.getLogger(UserDaoImpl.class);
 
-
     @Override
     public void addUser(User user) {
         Storage.users.add(user);

@@ -594,3 +594,18 @@ java.lang.ClassNotFoundException: `com.mysql.cj.jdbc.Driver
 2019-07-22 11:55:53 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
 2019-07-22 11:58:32 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
 2019-07-22 11:58:32 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 13:41:56 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 13:41:56 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 13:42:23 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 13:42:29 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 13:42:31 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 13:43:04 INFO  MailServiceImpl:53 - 6745 was send touser@user.ua
+2019-07-22 18:11:50 INFO  ProductDaoImpl:18 - Product Product{id=1, title='bread', description='white bread with garlic', price=12.5}added in db
+2019-07-22 18:11:50 INFO  ProductDaoImpl:18 - Product Product{id=2, title='cheese', description='parmesan', price=85.9}added in db
+2019-07-22 18:13:25 INFO  UserRegistrationServlet:56 - User was changed
+2019-07-22 18:13:29 INFO  UserDaoImpl:37 - model.User@1aea42 was deleted.
+2019-07-22 18:13:43 INFO  ProductDaoImpl:18 - Product Product{id=3, title='chockolate', description='with nuts and raison', price=23.0}added in db
+2019-07-22 18:14:18 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 18:14:20 INFO  Basket:33 - Product breadadded in your basket
+2019-07-22 18:14:23 INFO  Basket:33 - Product chockolateadded in your basket
+2019-07-22 18:14:49 INFO  MailServiceImpl:53 - 4459 was send torenvema@bigmir.net
