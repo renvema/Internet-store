@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.Optional;
 
 @WebServlet("/buy/product")
-public class ByProductsServlet extends HttpServlet {
+public class BuyProductsServlet extends HttpServlet {
 
     private static final ProductService productService = ProductServiceFactory.getInstance();
 

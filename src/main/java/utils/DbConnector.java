@@ -9,8 +9,8 @@ import java.sql.SQLException;
 public class DbConnector {
 
     private static final Logger logger = Logger.getLogger(DbConnector.class);
-
-    private static final String dbUrl = "jdbc:mysql://localhost:3307/shop"+
+    private static final String DRIVER ="com.mysql.cj.jdbc.Driver";
+    private static final String DB_URL = "jdbc:mysql://localhost:3307/shop" +
 
             "?verifyServerCertificate=false" +
 
@@ -28,8 +28,8 @@ public class DbConnector {
 
     public static Connection connect() {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            return DriverManager.getConnection(dbUrl, login, password);
+            Class.forName(DRIVER);
+            return DriverManager.getConnection(DB_URL, login, password);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
             logger.error("problem with connection to db", e);
