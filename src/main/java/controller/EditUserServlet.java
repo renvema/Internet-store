@@ -17,7 +17,7 @@ import java.util.Optional;
 public class EditUserServlet extends HttpServlet {
 
     private static final UserService userService = UserServiceFactory.getInstance();
-    private static final Logger logger = Logger.getLogger(UserRegistrationServlet.class);
+    private static final Logger logger = Logger.getLogger(EditUserServlet.class);
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
@@ -51,9 +51,7 @@ public class EditUserServlet extends HttpServlet {
                 req.setAttribute("oldPassword", password);
                 req.getRequestDispatcher("/change_user.jsp").forward(req, resp);
             } else {
-                user.setEmail(email);
-                user.setPassword(password);
-                logger.info("User was changed");
+                userService.update(user);
                 resp.sendRedirect("/admin/users");
             }
         }

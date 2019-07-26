@@ -3,11 +3,19 @@ package model;
 import utils.RandomHelper;
 
 public class Code {
+
+    private Long id;
     private String code;
     private User user;
 
     public Code(User user) {
         this.code = RandomHelper.getFourDigitCode();
+        this.user = user;
+    }
+
+    public Code(Long id, String code, User user) {
+        this.id = id;
+        this.code = code;
         this.user = user;
     }
 
@@ -27,21 +35,40 @@ public class Code {
         this.user = user;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass ( ) != o.getClass ( )) return false;
 
         Code code1 = (Code) o;
 
-        if (code != null ? !code.equals(code1.code) : code1.code != null) return false;
-        return user != null ? user.equals(code1.user) : code1.user == null;
+        if (id != null ? !id.equals (code1.id) : code1.id != null) return false;
+        if (code != null ? !code.equals (code1.code) : code1.code != null) return false;
+        return user != null ? user.equals (code1.user) : code1.user == null;
     }
 
     @Override
     public int hashCode() {
-        int result = code != null ? code.hashCode() : 0;
-        result = 31 * result + (user != null ? user.hashCode() : 0);
+        int result = id != null ? id.hashCode ( ) : 0;
+        result = 31 * result + (code != null ? code.hashCode ( ) : 0);
+        result = 31 * result + (user != null ? user.hashCode ( ) : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Code{" +
+                "id=" + id +
+                ", code='" + code + '\'' +
+                ", user=" + user +
+                '}';
     }
 }

@@ -1,11 +1,13 @@
 package controller;
 
 import factory.MailServiceFactory;
+import factory.OrderServiceFactory;
 import model.Basket;
 import model.Code;
 import model.Order;
 import model.User;
 import service.MailService;
+import service.OrderService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,6 +20,7 @@ import java.io.IOException;
 public class OrderServlet extends HttpServlet {
 
     private static final MailService mailService = MailServiceFactory.getMailService();
+    private static final OrderService orderService = OrderServiceFactory.getInstance();
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
@@ -40,7 +43,7 @@ public class OrderServlet extends HttpServlet {
             Code code = new Code(user);
             Basket basket = (Basket) req.getSession().getAttribute("basket");
             Order order = new Order(user, basket, code, name, surname, city, adress, phone);
-            req.getSession().setAttribute("order", order);
+            orderService.add(order);
             mailService.sendConfirmCode(order);
             resp.sendRedirect("/confirm");
         }

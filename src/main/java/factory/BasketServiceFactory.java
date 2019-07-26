@@ -10,11 +10,10 @@ public class BasketServiceFactory {
     private BasketServiceFactory() {
     }
 
-    public static BasketService getBasketService() {
+    public static BasketService getInstance() {
         if (instance == null) {
             instance = new BasketServiceImpl();
         }
         return instance;
     }
-
 }

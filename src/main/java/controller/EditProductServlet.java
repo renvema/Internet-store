@@ -17,7 +17,7 @@ import java.util.Optional;
 public class EditProductServlet extends HttpServlet {
 
     private static final ProductService productService = ProductServiceFactory.getInstance();
-    private static final Logger logger = Logger.getLogger(UserRegistrationServlet.class);
+    private static final Logger logger = Logger.getLogger(EditProductServlet.class);
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
@@ -54,9 +54,7 @@ public class EditProductServlet extends HttpServlet {
                 req.setAttribute("oldPrice", price);
                 req.getRequestDispatcher("/change_user.jsp").forward(req, resp);
             } else {
-                product.setTitle(title);
-                product.setDescription(description);
-                product.setPrice(price);
+                productService.update(product);
                 resp.sendRedirect("/products");
             }
         }

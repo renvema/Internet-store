@@ -34,6 +34,17 @@ public class Order {
         this.phone = phone;
     }
 
+    public Order(Long idOrder, User user, Code code, String name, String surname, String city, String adress, String phone) {
+        this.idOrder = idOrder;
+        this.user = user;
+        this.code = code;
+        this.name = name;
+        this.surname = surname;
+        this.city = city;
+        this.adress = adress;
+        this.phone = phone;
+    }
+
     public User getUser() {
         return user;
     }
