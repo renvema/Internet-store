@@ -6745,3 +6745,131 @@ java.sql.SQLIntegrityConstraintViolationException: Column 'id_user' in field lis
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:835)
+2019-07-29 12:22:22 INFO  ProductMySQLDaoImpl:55 - All products get from database
+2019-07-29 12:22:30 INFO  BasketMySQLDaoImpl:27 - Product added in basket
+2019-07-29 12:22:31 INFO  ProductMySQLDaoImpl:55 - All products get from database
+2019-07-29 12:22:32 INFO  BasketMySQLDaoImpl:27 - Product added in basket
+2019-07-29 12:22:32 INFO  ProductMySQLDaoImpl:55 - All products get from database
+2019-07-29 12:23:01 INFO  CodeMysqlDaoImpl:29 - Code Code{id=null, code='1914', user=model.User@7f19bcf7} added in db
+2019-07-29 12:23:29 INFO  OrderMySQLDaoImpl:66 - Order Order{idOrder=null, user=model.User@7f19bcf7, basket=null, code=Code{id=17, code='1914', user=model.User@7f19bcf7}, name='Mariana', surname='Shama', city='Kyiv', address='Gavryshiv,3', phone='34'} added in db
+2019-07-29 12:23:38 INFO  MailServiceImpl:53 - 5167 was send torenvema@bigmir.net
+2019-07-29 12:24:08 INFO  CodeMysqlDaoImpl:29 - Code Code{id=null, code='1881', user=model.User@7f19bcf7} added in db
+2019-07-29 12:24:09 INFO  OrderMySQLDaoImpl:66 - Order Order{idOrder=null, user=model.User@7f19bcf7, basket=null, code=Code{id=18, code='1881', user=model.User@7f19bcf7}, name='Mariana', surname='Shama', city='Kyiv', address='Gavryshiv,3', phone='34'} added in db
+2019-07-29 12:24:10 INFO  MailServiceImpl:53 - 5230 was send torenvema@bigmir.net
+2019-07-29 12:28:30 ERROR OrderMySQLDaoImpl:49 - Order can't get from database
+java.sql.SQLIntegrityConstraintViolationException: Column 'id_user' in field list is ambiguous
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1020)
+	at dao.impl.OrderMySQLDaoImpl.getOrder(OrderMySQLDaoImpl.java:31)
+	at service.impl.OrderServiceImpl.getOrder(OrderServiceImpl.java:17)
+	at controller.OrderConfirmServlet.doPost(OrderConfirmServlet.java:28)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:137)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:660)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:798)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:808)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2019-07-29 12:29:40 INFO  ProductMySQLDaoImpl:55 - All products get from database
+2019-07-29 12:29:46 INFO  BasketMySQLDaoImpl:27 - Product added in basket
+2019-07-29 12:29:46 INFO  ProductMySQLDaoImpl:55 - All products get from database
+2019-07-29 12:29:59 INFO  CodeMysqlDaoImpl:29 - Code Code{id=null, code='5717', user=model.User@7f19bcf7} added in db
+2019-07-29 12:29:59 INFO  OrderMySQLDaoImpl:66 - Order Order{idOrder=null, user=model.User@7f19bcf7, basket=null, code=Code{id=19, code='5717', user=model.User@7f19bcf7}, name='Mariana', surname='Shama', city='Kyiv', address='Gavryshiv,3', phone='234'} added in db
+2019-07-29 12:30:02 INFO  MailServiceImpl:53 - 6811 was send torenvema@bigmir.net
+2019-07-29 12:30:33 ERROR OrderMySQLDaoImpl:49 - Order can't get from database
+java.sql.SQLException: Column 'code' not found.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.findColumn(ResultSetImpl.java:581)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:967)
+	at dao.impl.OrderMySQLDaoImpl.getOrder(OrderMySQLDaoImpl.java:35)
+	at service.impl.OrderServiceImpl.getOrder(OrderServiceImpl.java:17)
+	at controller.OrderConfirmServlet.doPost(OrderConfirmServlet.java:28)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:137)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:660)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:798)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:808)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2019-07-29 12:30:44 ERROR OrderMySQLDaoImpl:49 - Order can't get from database
+java.sql.SQLException: Column 'code' not found.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.findColumn(ResultSetImpl.java:581)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:967)
+	at dao.impl.OrderMySQLDaoImpl.getOrder(OrderMySQLDaoImpl.java:35)
+	at service.impl.OrderServiceImpl.getOrder(OrderServiceImpl.java:17)
+	at controller.OrderConfirmServlet.doPost(OrderConfirmServlet.java:28)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:137)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:660)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:798)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:808)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+2019-07-29 12:35:31 INFO  ProductMySQLDaoImpl:55 - All products get from database
+2019-07-29 12:35:36 INFO  BasketMySQLDaoImpl:27 - Product added in basket
+2019-07-29 12:35:36 INFO  ProductMySQLDaoImpl:55 - All products get from database
+2019-07-29 12:35:51 INFO  CodeMysqlDaoImpl:29 - Code Code{id=null, code='6111', user=model.User@7f19bcf7} added in db
+2019-07-29 12:35:51 INFO  OrderMySQLDaoImpl:66 - Order Order{idOrder=null, user=model.User@7f19bcf7, basket=null, code=Code{id=20, code='6111', user=model.User@7f19bcf7}, name='Mariana', surname='Shama', city='Kyiv', address='Gavryshiv,3', phone='11111'} added in db
+2019-07-29 12:35:54 INFO  MailServiceImpl:53 - 4166 was send torenvema@bigmir.net
+2019-07-29 12:36:20 INFO  BasketMySQLDaoImpl:55 - Basket was cleaned

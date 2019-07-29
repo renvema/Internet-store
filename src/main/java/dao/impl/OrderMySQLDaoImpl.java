@@ -18,10 +18,9 @@ public class OrderMySQLDaoImpl implements OrderDao {
     private static final Logger logger = Logger.getLogger(OrderMySQLDaoImpl.class);
     private static final String ADD_ORDER = "INSERT INTO `order` (id_user, id_code, " +
             "name, surname, city, address, phone) VALUES (?, ?, ?, ?, ?, ?, ?)";
-    private static final String GET_ORDER = "SELECT `order`.id, id_user, id_code, " +
+    private static final String GET_ORDER = "SELECT `order`.id, `order`.id_user, id_code, code, " +
             "name, surname, city, address, phone " +
             "FROM `order` INNER JOIN code ON `order`.id_code = code.id " +
-            "INNER JOIN users ON `order`.id_user = users.id " +
             "WHERE `order`.id_user = ? ORDER BY `order`.id DESC LIMIT 1";
 
     @Override

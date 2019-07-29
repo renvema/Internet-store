@@ -26,14 +26,16 @@ public class OrderConfirmServlet extends HttpServlet {
         String enteredCode = req.getParameter("code");
         User user = (User) req.getSession().getAttribute("user");
         Optional<Order> optOrder = orderService.getOrder(user);
-        Order order = optOrder.get();
-        if (user == order.getUser()) {
-            if (enteredCode.equals(order.getCode().getCode())) {
-                basketService.clean(user);
-                req.setAttribute("message", "Your buying is successful.");
-            } else {
-                req.setAttribute("message", "The code is wrong. Try again");
-            }
+        if (optOrder.isPresent()) {
+            Order order = optOrder.get();
+                if (enteredCode.equals(order.getCode().getCode())) {
+                    basketService.clean(user);
+                    req.setAttribute("message", "Your buying is successful.");
+                } else {
+                    req.setAttribute("message", "The code is wrong. Try again");
+                }
+                req.getRequestDispatcher("/confirm.jsp").forward(req, resp);
+        } else {
             req.getRequestDispatcher("/confirm.jsp").forward(req, resp);
         }
     }
