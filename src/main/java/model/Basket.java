@@ -28,11 +28,6 @@ public class Basket {
         this.user = user;
     }
 
-    public void addProductInBasket(Product product) {
-        products.add(product);
-        logger.info("Product " + product.getTitle() + "added in your basket");
-    }
-
     public int getSize() {
         return products.size();
     }
@@ -59,6 +54,11 @@ public class Basket {
 
     public void setIdBasket(Long idBasket) {
         this.idBasket = idBasket;
+    }
+
+    public void addProductInBasket(Product product) {
+        products.add(product);
+        logger.info("Product " + product.getTitle() + "added in your basket");
     }
 
     @Override

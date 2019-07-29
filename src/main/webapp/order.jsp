@@ -24,8 +24,8 @@
         City:<br>
         <input type="text" name="city" value="">
         <br>
-        Adress:<br>
-        <input type="text" name="adress" value="">
+        Address:<br>
+        <input type="text" name="address" value="">
         <br>
         Phone:<br>
         <input type="number" name="phone" value="">

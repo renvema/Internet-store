@@ -5,7 +5,7 @@ import model.Basket;
 import model.Product;
 import model.User;
 import service.UserService;
-import utils.IdGenerator;
+import utils.HashUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,12 +25,12 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         String email = req.getParameter("email");
-        String password = req.getParameter("password");
+        String hashPassword = HashUtil.getSHA256SecurePassword(req.getParameter("password"));
         Optional<User> optUser = userService.findUserByEmail(email);
-        if (optUser.isPresent() && optUser.get().getPassword().equals(password)) {
+        if (optUser.isPresent() && optUser.get().getPassword().equals(hashPassword)) {
             HttpSession session = req.getSession();
             session.setAttribute("user", optUser.get());
-            Basket basket = new Basket(IdGenerator.generateIdBasket(),
+            Basket basket = new Basket(
                     new ArrayList<Product>(), optUser.get());
             session.setAttribute("basket", basket);
             resp.sendRedirect("/admin/users");

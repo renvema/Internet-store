@@ -1,7 +1,7 @@
 package factory;
 
 import dao.UserDao;
-import dao.impl.UserDaoImpl;
+import dao.impl.UserMySQLDaoImpl;
 
 public class UserDaoFactory {
 
@@ -12,7 +12,7 @@ public class UserDaoFactory {
 
     public static UserDao getUserDao() {
         if (instance == null) {
-            instance = new UserDaoImpl();
+            instance = new UserMySQLDaoImpl();
         }
         return instance;
     }

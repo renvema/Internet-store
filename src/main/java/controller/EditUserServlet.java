@@ -17,7 +17,7 @@ import java.util.Optional;
 public class EditUserServlet extends HttpServlet {
 
     private static final UserService userService = UserServiceFactory.getInstance();
-    private static final Logger logger = Logger.getLogger(UserRegistrationServlet.class);
+    private static final Logger logger = Logger.getLogger(EditUserServlet.class);
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
@@ -40,22 +40,17 @@ public class EditUserServlet extends HttpServlet {
 
         String email = req.getParameter("email");
         String password = req.getParameter("password");
+        String role = req.getParameter("role");
         Long id = Long.valueOf(req.getParameter("id"));
-        User user;
-        Optional<User> optUser = userService.getUsersById(id);
-        if (optUser.isPresent()) {
-            user = optUser.get();
-            if (email.isEmpty() || password.isEmpty()) {
-                req.setAttribute("error", "Empty fields!");
-                req.setAttribute("oldEmail", email);
-                req.setAttribute("oldPassword", password);
-                req.getRequestDispatcher("/change_user.jsp").forward(req, resp);
-            } else {
-                user.setEmail(email);
-                user.setPassword(password);
-                logger.info("User was changed");
-                resp.sendRedirect("/admin/users");
-            }
+        if (email.isEmpty() || password.isEmpty()) {
+            req.setAttribute("error", "Empty fields!");
+            req.setAttribute("oldEmail", email);
+            req.setAttribute("oldPassword", password);
+            req.getRequestDispatcher("/change_user.jsp").forward(req, resp);
+        } else {
+            User user = new User(id, email, password, role);
+            userService.update(user);
+            resp.sendRedirect("/admin/users");
         }
     }
 }

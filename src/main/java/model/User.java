@@ -20,6 +20,12 @@ public class User {
         this.role = role;
     }
 
+    public User(Long id, String email, String password) {
+        this.id = id;
+        this.email = email;
+        this.password = password;
+    }
+
     public Long getId() {
         return id;
     }

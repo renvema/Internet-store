@@ -17,7 +17,7 @@ import java.util.Optional;
 public class EditProductServlet extends HttpServlet {
 
     private static final ProductService productService = ProductServiceFactory.getInstance();
-    private static final Logger logger = Logger.getLogger(UserRegistrationServlet.class);
+    private static final Logger logger = Logger.getLogger(EditProductServlet.class);
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
@@ -43,22 +43,20 @@ public class EditProductServlet extends HttpServlet {
         String description = req.getParameter("description");
         Double price = Double.parseDouble(req.getParameter("price"));
         Long id = Long.valueOf(req.getParameter("id"));
-        Product product;
-        Optional<Product> optProduct = productService.getProductsById(id);
-        if (optProduct.isPresent()) {
-            product = optProduct.get();
-            if (title.isEmpty() || description.isEmpty()) {
-                req.setAttribute("error", "Empty fields!");
-                req.setAttribute("oldTitle", title);
-                req.setAttribute("oldDescription", description);
-                req.setAttribute("oldPrice", price);
-                req.getRequestDispatcher("/change_user.jsp").forward(req, resp);
-            } else {
-                product.setTitle(title);
-                product.setDescription(description);
-                product.setPrice(price);
-                resp.sendRedirect("/products");
-            }
+//        Product product;
+//        Optional<Product> optProduct = productService.getProductsById(id);
+//        if (optProduct.isPresent()) {
+//            product = optProduct.get();
+        if (title.isEmpty() || description.isEmpty()) {
+            req.setAttribute("error", "Empty fields!");
+            req.setAttribute("oldTitle", title);
+            req.setAttribute("oldDescription", description);
+            req.setAttribute("oldPrice", price);
+            req.getRequestDispatcher("/change_user.jsp").forward(req, resp);
+        } else {
+            Product product = new Product(id, title, description, price);
+            productService.update(product);
+            resp.sendRedirect("/products");
         }
     }
 }

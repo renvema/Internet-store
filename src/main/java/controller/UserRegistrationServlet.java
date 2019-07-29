@@ -4,6 +4,7 @@ import factory.UserServiceFactory;
 import model.User;
 import org.apache.log4j.Logger;
 import service.UserService;
+import utils.HashUtil;
 import utils.IdGenerator;
 
 import javax.servlet.ServletException;
@@ -29,15 +30,15 @@ public class UserRegistrationServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         String email = req.getParameter("email");
-        String password = req.getParameter("password");
-        String repeatPassword = req.getParameter("repeatPassword");
+        String hashPassword = HashUtil.getSHA256SecurePassword(req.getParameter("password"));
+        String hashRepeatPassword = HashUtil.getSHA256SecurePassword(req.getParameter("repeatPassword"));
         String role = req.getParameter("role");
 
-        if (email.isEmpty() || email.isEmpty() || password.isEmpty()) {
+        if (email.isEmpty() || email.isEmpty() || hashPassword.isEmpty()) {
             req.setAttribute("error", "Empty fields!");
             req.getRequestDispatcher("/add_user.jsp").forward(req, resp);
-        } else if (password.equals(repeatPassword)) {
-            User user = new User(IdGenerator.generateIdUser(), email, password, role);
+        } else if (hashPassword.equals(hashRepeatPassword)) {
+            User user = new User(IdGenerator.generateIdUser(), email, hashPassword, role);
             userService.addUser(user);
             resp.sendRedirect("/admin/users");
         } else {
@@ -45,7 +46,7 @@ public class UserRegistrationServlet extends HttpServlet {
             req.setAttribute("error", "You passwords not equals");
 
             req.getRequestDispatcher("/add_user.jsp").forward(req, resp);
-            logger.info("Passwords {" + password + "} and {" + repeatPassword + "} not equals");
+            logger.info("Passwords {" + hashPassword + "} and {" + hashRepeatPassword + "} not equals");
         }
     }
 }

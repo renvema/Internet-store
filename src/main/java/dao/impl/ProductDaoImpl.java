@@ -39,4 +39,9 @@ public class ProductDaoImpl implements ProductDao {
             logger.info("Product not deleted");
         }
     }
+
+    @Override
+    public void update(Product product) {
+
+    }
 }

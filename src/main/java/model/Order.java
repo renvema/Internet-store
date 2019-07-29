@@ -9,28 +9,39 @@ public class Order {
     private String name;
     private String surname;
     private String city;
-    private String adress;
+    private String address;
     private String phone;
 
     public Order(User user, Basket basket, Code code, String name, String surname,
-                 String city, String adress, String phone) {
+                 String city, String address, String phone) {
         this.user = user;
         this.basket = basket;
         this.code = code;
         this.name = name;
         this.surname = surname;
         this.city = city;
-        this.adress = adress;
+        this.address = address;
         this.phone = phone;
     }
 
-    public Order(User user, Code code, String name, String surname, String city, String adress, String phone) {
+    public Order(User user, Code code, String name, String surname, String city, String address, String phone) {
         this.user = user;
         this.code = code;
         this.name = name;
         this.surname = surname;
         this.city = city;
-        this.adress = adress;
+        this.address = address;
+        this.phone = phone;
+    }
+
+    public Order(Long idOrder, User user, Code code, String name, String surname, String city, String address, String phone) {
+        this.idOrder = idOrder;
+        this.user = user;
+        this.code = code;
+        this.name = name;
+        this.surname = surname;
+        this.city = city;
+        this.address = address;
         this.phone = phone;
     }
 
@@ -82,12 +93,12 @@ public class Order {
         this.city = city;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getPhone() {
@@ -120,7 +131,7 @@ public class Order {
         if (name != null ? !name.equals(order.name) : order.name != null) return false;
         if (surname != null ? !surname.equals(order.surname) : order.surname != null) return false;
         if (city != null ? !city.equals(order.city) : order.city != null) return false;
-        if (adress != null ? !adress.equals(order.adress) : order.adress != null) return false;
+        if (address != null ? !address.equals(order.address) : order.address != null) return false;
         return phone != null ? phone.equals(order.phone) : order.phone == null;
     }
 
@@ -133,7 +144,7 @@ public class Order {
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (surname != null ? surname.hashCode() : 0);
         result = 31 * result + (city != null ? city.hashCode() : 0);
-        result = 31 * result + (adress != null ? adress.hashCode() : 0);
+        result = 31 * result + (address != null ? address.hashCode() : 0);
         result = 31 * result + (phone != null ? phone.hashCode() : 0);
         return result;
     }
@@ -148,7 +159,7 @@ public class Order {
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", city='" + city + '\'' +
-                ", adress='" + adress + '\'' +
+                ", address='" + address + '\'' +
                 ", phone='" + phone + '\'' +
                 '}';
     }

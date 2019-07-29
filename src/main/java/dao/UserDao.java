@@ -16,4 +16,6 @@ public interface UserDao {
     void deleteUser(Long id);
 
     Optional<User> findUserByEmail(String email);
+
+    void update(User user);
 }

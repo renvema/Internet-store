@@ -53,7 +53,7 @@ public class MailServiceImpl implements MailService {
             logger.info(RandomHelper.getFourDigitCode() + " was send to" + order.getUser().getEmail());
 
         } catch (MessagingException e) {
-            e.printStackTrace();
+            logger.error("Mail can't send", e);
         }
     }
 }
