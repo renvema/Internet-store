@@ -9,5 +9,5 @@ public interface CodeDao {
 
     void add(Code code);
 
-    Optional<Code> getCode(User user);
+    Optional<Code> getCodeForUser(User user);
 }

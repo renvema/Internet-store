@@ -8,48 +8,46 @@ import org.apache.log4j.Logger;
 import utils.DbConnector;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Optional;
 
 public class OrderMySQLDaoImpl implements OrderDao {
 
     private static final Logger logger = Logger.getLogger(OrderMySQLDaoImpl.class);
+    private static final String ADD_ORDER = "INSERT INTO `order` (id_user, id_code, " +
+            "name, surname, city, address, phone) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    private static final String GET_ORDER = "SELECT `order`.id, id_user, id_code, " +
+            "name, surname, city, address, phone " +
+            "FROM `order` INNER JOIN code ON `order`.id_code = code.id " +
+            "INNER JOIN users ON `order`.id_user = users.id " +
+            "WHERE `order`.id_user = ? ORDER BY `order`.id DESC LIMIT 1";
 
     @Override
     public Optional<Order> getOrder(User user) {
-        try (Connection connection = DbConnector.connect()) {
-            Statement statement = connection.createStatement();
-            String sql = String.format("SELECT `order`.id, id_user, id_code, id_basket, name, surname, city, adress, phone, email, password, role, code" +
-                    "FROM `order` INNER JOIN users on `order`.id_user = users.id" +
-                    "INNER JOIN basket on `order`.id_basket = basket.id" +
-                    "INNER JOIN code on `order`.id_code = code.id" +
-                    "where `order`.id_user=users.id", user.getId());
-            ResultSet resultSet = statement.executeQuery(sql);
+        try (Connection connection = DbConnector.connect();
+             PreparedStatement preparedStatement = connection.prepareStatement(GET_ORDER)) {
+            preparedStatement.setLong(1, user.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
-                User userFromDB = new User(
-                        resultSet.getLong("id_user"),
-                        resultSet.getString("email"),
-                        resultSet.getString("password"),
-                        resultSet.getString("role"));
                 Code code = new Code(
-                        resultSet.getLong("id"),
+                        resultSet.getLong("id_code"),
                         resultSet.getString("code"),
-                        userFromDB);
+                        user);
                 Order order = new Order(
                         resultSet.getLong("id"),
-                        userFromDB,
+                        user,
                         code,
                         resultSet.getString("name"),
                         resultSet.getString("surname"),
                         resultSet.getString("city"),
-                        resultSet.getString("adress"),
+                        resultSet.getString("address"),
                         resultSet.getString("phone"));
                 return Optional.of(order);
             }
         } catch (SQLException e) {
-            logger.error("Orde can't get from database", e);
+            logger.error("Order can't get from database", e);
         }
         return Optional.empty();
     }
@@ -57,14 +55,15 @@ public class OrderMySQLDaoImpl implements OrderDao {
     @Override
     public void add(Order order) {
         try (Connection connection = DbConnector.connect()) {
-            String sql = String.format("INSERT INTO users (id_user, id_code, id_basket, name, " +
-                            "surname, city, adress, phone) " +
-                            "VALUES (%d, %d, %d, '%s', '%s', '%s', '%s', '%s')",
-                    order.getUser().getId(), order.getCode().getId(),
-                    order.getBasket().getIdBasket(), order.getName(), order.getSurname(),
-                    order.getCity(), order.getAdress(), order.getPhone());
-            Statement statement = connection.createStatement();
-            statement.execute(sql);
+            PreparedStatement preparedStatement = connection.prepareStatement(ADD_ORDER);
+            preparedStatement.setLong(1, order.getUser().getId());
+            preparedStatement.setLong(2, order.getCode().getId());
+            preparedStatement.setString(3, order.getName());
+            preparedStatement.setString(4, order.getSurname());
+            preparedStatement.setString(5, order.getCity());
+            preparedStatement.setString(6, order.getAddress());
+            preparedStatement.setString(7, order.getPhone());
+            preparedStatement.execute();
             logger.info("Order " + order + " added in db");
         } catch (SQLException e) {
             logger.error("Order can't added in db", e);

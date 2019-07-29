@@ -13,7 +13,6 @@ public class BasketDaoFactory {
     public static BasketDao getBasketDao() {
         if (instance == null) {
             instance = new BasketMySQLDaoImpl ();
-           // instance = new BasketDaoImpl();
         }
         return instance;
     }

@@ -18,7 +18,7 @@ public class CodeServiceImpl implements CodeService {
     }
 
     @Override
-    public Optional<Code> getCode(User user) {
-        return codeDao.getCode(user);
+    public Optional<Code> getCodeForUser(User user) {
+        return codeDao.getCodeForUser(user);
     }
 }

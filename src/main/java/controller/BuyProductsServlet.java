@@ -31,7 +31,6 @@ public class BuyProductsServlet extends HttpServlet {
         User user = (User) req.getSession().getAttribute("user");
         Optional<Product> OptProduct = productService.getProductsById(id);
         if (OptProduct.isPresent()) {
-            // basket.addProductInBasket(OptProduct.get());
             basketService.addProductToBasket(user.getId(), id);
             req.setAttribute("message", "Product add in your basket");
             HttpSession session = req.getSession();

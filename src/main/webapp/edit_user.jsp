@@ -21,6 +21,8 @@
     <form action="/admin/edit/user?id=${userId}" method="post">
         Email <input name="email" type="email" value="${oldEmail}"> <br>
         Password <input name="password" type="password" value="${oldPassword}"> <br>
+        <input name="role" type="radio" value="admin"> admin
+        <input name="role" type="radio" value="user" checked>user
         <input type="submit" value="Save">
     </form>
 

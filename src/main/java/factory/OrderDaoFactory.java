@@ -12,7 +12,6 @@ public class OrderDaoFactory {
 
     public static OrderDao getInstance() {
         if (instance == null) {
-            // instance = new ProductDaoImpl();
             instance = new OrderMySQLDaoImpl();
         }
         return instance;

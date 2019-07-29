@@ -19,6 +19,11 @@ public class Code {
         this.user = user;
     }
 
+    public Code(String code, User user) {
+        this.code = code;
+        this.user = user;
+    }
+
     public String getCode() {
         return code;
     }

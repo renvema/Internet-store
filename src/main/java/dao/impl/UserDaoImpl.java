@@ -43,4 +43,9 @@ public class UserDaoImpl implements UserDao {
     public Optional<User> findUserByEmail(String email) {
         return Storage.users.stream().filter(user -> user.getEmail().equals(email)).findFirst();
     }
+
+    @Override
+    public void update(User user) {
+
+    }
 }

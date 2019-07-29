@@ -6,9 +6,9 @@ import org.apache.log4j.Logger;
 import utils.DbConnector;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -16,15 +16,21 @@ import java.util.Optional;
 public class UserMySQLDaoImpl implements UserDao {
 
     private static final Logger logger = Logger.getLogger(UserDaoImpl.class);
+    private static final String ADD_USER = "INSERT INTO users (email, password, role) VALUES (?, ?, ?)";
+    private static final String GET_ALL_USER = "SELECT * FROM users";
+    private static final String GET_USER_BY_ID = "SELECT * FROM users WHERE id=?";
+    private static final String DELETE_USER = "DELETE FROM users WHERE id=?";
+    private static final String FIND_USER_BY_EMAIL = "SELECT * FROM users WHERE email=?";
+    private static final String UPDATE_USER = "UPDATE users SET email=?, password=?, role=? WHERE id=?";
 
     @Override
     public void addUser(User user) {
         try (Connection connection = DbConnector.connect()) {
-            String sql = String.format("INSERT INTO users (email, password, role)" +
-                            "VALUES ('%s', '%s', '%s')",
-                    user.getEmail(), user.getPassword(), user.getRole());
-            Statement statement = connection.createStatement();
-            statement.execute(sql);
+            PreparedStatement preparedStatement = connection.prepareStatement(ADD_USER);
+            preparedStatement.setString(1, user.getEmail());
+            preparedStatement.setString(2, user.getPassword());
+            preparedStatement.setString(3, user.getRole());
+            preparedStatement.execute();
             logger.info("User " + user + " added in db");
         } catch (SQLException e) {
             logger.error("User can't added in db", e);
@@ -35,9 +41,8 @@ public class UserMySQLDaoImpl implements UserDao {
     public List<User> getAll() {
         List<User> userList = new ArrayList<>();
         try (Connection connection = DbConnector.connect()) {
-            Statement statement = connection.createStatement();
-            String sql = String.format("SELECT * FROM users");
-            ResultSet resultSet = statement.executeQuery(sql);
+            PreparedStatement preparedStatement = connection.prepareStatement(GET_ALL_USER);
+            ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 User userFromDb = new User(
                         resultSet.getLong("id"),
@@ -56,11 +61,10 @@ public class UserMySQLDaoImpl implements UserDao {
     @Override
     public Optional<User> getUsersById(Long userId) {
         try (Connection connection = DbConnector.connect()) {
-            String sql = String.format("SELECT * FROM users WHERE id=%d",
-                    userId);
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(sql);
-            while (resultSet.next()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(GET_USER_BY_ID);
+            preparedStatement.setLong(1, userId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
                 User userFromDb = new User(
                         resultSet.getLong("id"),
                         resultSet.getString("email"),
@@ -79,10 +83,9 @@ public class UserMySQLDaoImpl implements UserDao {
     @Override
     public void deleteUser(Long id) {
         try (Connection connection = DbConnector.connect()) {
-            String sql = String.format("DELETE FROM users WHERE id=%d",
-                    id);
-            Statement statement = connection.createStatement();
-            statement.execute(sql);
+            PreparedStatement preparedStatement = connection.prepareStatement(DELETE_USER);
+            preparedStatement.setLong(1, id);
+            preparedStatement.execute();
             logger.info("User with id " + id + " remove from db");
         } catch (SQLException e) {
             logger.error("User can't remove from db", e);
@@ -92,10 +95,9 @@ public class UserMySQLDaoImpl implements UserDao {
     @Override
     public Optional<User> findUserByEmail(String email) {
         try (Connection connection = DbConnector.connect()) {
-            String sql = String.format("SELECT * FROM users WHERE email='%s'",
-                    email);
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(sql);
+            PreparedStatement preparedStatement = connection.prepareStatement(FIND_USER_BY_EMAIL);
+            preparedStatement.setString(1, email);
+            ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 User userFromDb = new User(
                         resultSet.getLong("id"),
@@ -113,10 +115,12 @@ public class UserMySQLDaoImpl implements UserDao {
     @Override
     public void update(User user) {
         try (Connection connection = DbConnector.connect()) {
-            String sql = String.format("UPDATE users SET email='%s', password='%s', role='%s' WHERE id=%d",
-                    user.getEmail(), user.getPassword(), user.getRole(), user.getId());
-            Statement statement = connection.createStatement();
-            statement.execute(sql);
+            PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_USER);
+            preparedStatement.setString(1, user.getEmail());
+            preparedStatement.setString(2, user.getPassword());
+            preparedStatement.setString(3, user.getRole());
+            preparedStatement.setLong(4, user.getId());
+            preparedStatement.execute();
             logger.info("User " + user + " was update");
         } catch (SQLException e) {
             logger.error("User can't update", e);

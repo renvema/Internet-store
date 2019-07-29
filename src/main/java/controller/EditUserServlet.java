@@ -40,20 +40,17 @@ public class EditUserServlet extends HttpServlet {
 
         String email = req.getParameter("email");
         String password = req.getParameter("password");
+        String role = req.getParameter("role");
         Long id = Long.valueOf(req.getParameter("id"));
-        User user;
-        Optional<User> optUser = userService.getUsersById(id);
-        if (optUser.isPresent()) {
-            user = optUser.get();
-            if (email.isEmpty() || password.isEmpty()) {
-                req.setAttribute("error", "Empty fields!");
-                req.setAttribute("oldEmail", email);
-                req.setAttribute("oldPassword", password);
-                req.getRequestDispatcher("/change_user.jsp").forward(req, resp);
-            } else {
-                userService.update(user);
-                resp.sendRedirect("/admin/users");
-            }
+        if (email.isEmpty() || password.isEmpty()) {
+            req.setAttribute("error", "Empty fields!");
+            req.setAttribute("oldEmail", email);
+            req.setAttribute("oldPassword", password);
+            req.getRequestDispatcher("/change_user.jsp").forward(req, resp);
+        } else {
+            User user = new User(id, email, password, role);
+            userService.update(user);
+            resp.sendRedirect("/admin/users");
         }
     }
 }
