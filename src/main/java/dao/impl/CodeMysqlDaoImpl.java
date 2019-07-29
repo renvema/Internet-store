@@ -15,7 +15,7 @@ import java.util.Optional;
 public class CodeMysqlDaoImpl implements CodeDao {
 
     private static final Logger logger = Logger.getLogger(CodeMysqlDaoImpl.class);
-    private static final String ADD_CODE = "INSERT INTO code(code, id_user) VALUES (?, ?)";
+    private static final String ADD_CODE = "INSERT INTO code(code, id_user) VALUES (?, ?) ";
     private static final String GET_CODE_FOR_USER = "SELECT * FROM code " +
             " WHERE id_user = ? ORDER BY id DESC LIMIT 1";
 
