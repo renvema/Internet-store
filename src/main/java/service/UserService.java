@@ -13,7 +13,7 @@ public interface UserService {
 
     Optional<User> getUsersById(Long userId);
 
-    void deleteUser(Long id);
+    void deleteUser(User user);
 
     Optional<User> findUserByEmail(String email);
 

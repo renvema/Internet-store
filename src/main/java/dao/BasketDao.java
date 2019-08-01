@@ -1,12 +1,20 @@
 package dao;
 
+import model.Basket;
+import model.Product;
 import model.User;
+
+import java.util.Optional;
 
 public interface BasketDao {
 
-    void addProductToBasket(Long idUser, Long productId);
+    void addBasket(Basket basket);
 
-    int size(Long id);
+    void addProductToBasket(Basket basket, Product product);
+
+    int size(Basket basket);
 
     void clean(User user);
+
+    Optional<Basket> getBasketByUser(User user);
 }

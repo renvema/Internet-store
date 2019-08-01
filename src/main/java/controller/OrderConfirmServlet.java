@@ -1,10 +1,8 @@
 package controller;
 
-import factory.BasketServiceFactory;
 import factory.OrderServiceFactory;
 import model.Order;
 import model.User;
-import service.BasketService;
 import service.OrderService;
 
 import javax.servlet.ServletException;
@@ -19,7 +17,6 @@ import java.util.Optional;
 public class OrderConfirmServlet extends HttpServlet {
 
     OrderService orderService = OrderServiceFactory.getInstance();
-    BasketService basketService = BasketServiceFactory.getInstance();
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
@@ -29,7 +26,6 @@ public class OrderConfirmServlet extends HttpServlet {
         if (optOrder.isPresent()) {
             Order order = optOrder.get();
                 if (enteredCode.equals(order.getCode().getCode())) {
-                    basketService.clean(user);
                     req.setAttribute("message", "Your buying is successful.");
                 } else {
                     req.setAttribute("message", "The code is wrong. Try again");

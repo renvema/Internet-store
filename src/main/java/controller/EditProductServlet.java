@@ -44,7 +44,7 @@ public class EditProductServlet extends HttpServlet {
         Double price = Double.parseDouble(req.getParameter("price"));
         Long id = Long.valueOf(req.getParameter("id"));
 //        Product product;
-//        Optional<Product> optProduct = productService.getProductsById(id);
+//        Optional<Product> optProduct = productService.getProductById(id);
 //        if (optProduct.isPresent()) {
 //            product = optProduct.get();
         if (title.isEmpty() || description.isEmpty()) {

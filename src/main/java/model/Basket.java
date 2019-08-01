@@ -2,16 +2,49 @@ package model;
 
 import org.apache.log4j.Logger;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Table(name = "basket")
 public class Basket {
 
     private static final Logger logger = Logger.getLogger(Basket.class);
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long idBasket;
+
+    @ManyToMany(cascade = {CascadeType.MERGE})
+    @JoinTable(
+            name = "product_basket",
+            joinColumns = {@JoinColumn(name = "basket_id")},
+            inverseJoinColumns = {@JoinColumn(name = "product_id")}
+    )
     private List<Product> products = new ArrayList<>();
+
+    @OneToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
+
+    public Basket() {
+    }
+
+    public Basket(List<Product> products) {
+        this.products = products;
+    }
 
     public Basket(List<Product> products, User user) {
         this.products = products;

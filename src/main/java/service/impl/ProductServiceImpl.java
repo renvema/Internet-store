@@ -21,11 +21,11 @@ public class ProductServiceImpl implements ProductService {
     }
 
     public Optional<Product> getProductsById(Long productId) {
-        return productDao.getProductsById(productId);
+        return productDao.getProductById(productId);
     }
 
-    public void deleteProduct(Long id) {
-        productDao.deleteProduct(id);
+    public void deleteProduct(Product product) {
+        productDao.deleteProduct(product);
     }
 
     @Override
