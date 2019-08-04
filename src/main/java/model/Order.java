@@ -1,16 +1,53 @@
 package model;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "orders")
 public class Order {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long idOrder;
+
+    @OneToOne(targetEntity = User.class, cascade = CascadeType.MERGE)
+    @JoinColumn(name = "user_id")
     private User user;
+
+    @OneToOne(targetEntity = Basket.class, cascade = CascadeType.MERGE)
+    @JoinColumn(name = "basket_id")
     private Basket basket;
+
+    @OneToOne(targetEntity = Code.class, cascade = CascadeType.MERGE)
+    @JoinColumn(name = "code_id")
     private Code code;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "surname")
     private String surname;
+
+    @Column(name = "city")
     private String city;
+
+    @Column(name = "address")
     private String address;
+
+    @Column(name = "phone")
     private String phone;
+
+    public Order() {
+    }
 
     public Order(User user, Basket basket, Code code, String name, String surname,
                  String city, String address, String phone) {

@@ -21,11 +21,11 @@ public class UserServiceImpl implements UserService {
     }
 
     public Optional<User> getUsersById(Long userId) {
-        return userDao.getUsersById(userId);
+        return userDao.getUserById(userId);
     }
 
-    public void deleteUser(Long id) {
-        userDao.deleteUser(id);
+    public void deleteUser(User user) {
+        userDao.deleteUser(user);
     }
 
     public Optional<User> findUserByEmail(String email) {

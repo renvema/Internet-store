@@ -1,6 +1,7 @@
 package controller;
 
 import factory.UserServiceFactory;
+import model.User;
 import service.UserService;
 
 import javax.servlet.ServletException;
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Optional;
 
 @WebServlet("/admin/delete/user")
 public class DeleteUserServlet extends HttpServlet {
@@ -19,7 +21,8 @@ public class DeleteUserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws IOException, ServletException {
         Long id = Long.valueOf(req.getParameter("id"));
-        userService.deleteUser(id);
+        Optional<User> optUser = userService.getUsersById(id);
+        optUser.ifPresent(userService::deleteUser);
         req.setAttribute("allUsers", userService.getAll());
         req.getRequestDispatcher("/admin/users").forward(req, resp);
     }

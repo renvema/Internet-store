@@ -1,7 +1,7 @@
 package factory;
 
 import dao.CodeDao;
-import dao.impl.CodeMysqlDaoImpl;
+import dao.impl.CodeHibernateDaoImpl;
 
 public class CodeDaoFactory {
 
@@ -12,7 +12,7 @@ public class CodeDaoFactory {
 
     public static CodeDao getCodeDao() {
         if (instance == null) {
-            instance = new CodeMysqlDaoImpl ();
+            instance = new CodeHibernateDaoImpl();
         }
         return instance;
     }

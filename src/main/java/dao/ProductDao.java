@@ -11,9 +11,9 @@ public interface ProductDao {
 
     List<Product> getAll();
 
-    Optional<Product> getProductsById(Long productId);
+    Optional<Product> getProductById(Long productId);
 
-    void deleteProduct(Long id);
+    void deleteProduct(Product product);
 
     public void update(Product product);
 }

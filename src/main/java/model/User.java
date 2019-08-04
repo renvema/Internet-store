@@ -1,17 +1,49 @@
 package model;
 
+import utils.SaltHashUtil;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "users")
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "password")
     private String password;
+
+    @Column(name = "role")
     private String role;
 
+    @Column(name = "salt")
+    private String salt;
+
+    public User() {
+    }
+
     public User(String email, String password, String role) {
+        this.salt= SaltHashUtil.getRandomeSalt();
         this.email = email;
         this.password = password;
         this.role = role;
     }
+//    public User(String email, String password, String role) {
+//        this.email = email;
+//        this.password = password;
+//        this.role = role;
+//    }
 
     public User(Long id, String email, String password, String role) {
         this.id = id;
@@ -58,6 +90,14 @@ public class User {
         this.role = role;
     }
 
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -69,7 +109,8 @@ public class User {
         if (email != null ? !email.equals(user.email) : user.email != null) return false;
         if (password != null ? !password.equals(user.password) : user.password != null)
             return false;
-        return role != null ? role.equals(user.role) : user.role == null;
+        if (role != null ? !role.equals(user.role) : user.role != null) return false;
+        return salt != null ? salt.equals(user.salt) : user.salt == null;
     }
 
     @Override
@@ -78,6 +119,18 @@ public class User {
         result = 31 * result + (email != null ? email.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
         result = 31 * result + (role != null ? role.hashCode() : 0);
+        result = 31 * result + (salt != null ? salt.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", role='" + role + '\'' +
+                ", salt='" + salt + '\'' +
+                '}';
     }
 }

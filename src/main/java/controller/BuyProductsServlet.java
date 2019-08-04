@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @WebServlet("/buy/product")
@@ -27,15 +29,25 @@ public class BuyProductsServlet extends HttpServlet {
             throws ServletException, IOException {
 
         Long id = Long.valueOf(req.getParameter("id"));
-        Basket basket = (Basket) req.getSession().getAttribute("basket");
         User user = (User) req.getSession().getAttribute("user");
-        Optional<Product> OptProduct = productService.getProductsById(id);
-        if (OptProduct.isPresent()) {
-            basketService.addProductToBasket(user.getId(), id);
-            req.setAttribute("message", "Product add in your basket");
+        Optional<Product> optProduct = productService.getProductsById(id);
+        if (optProduct.isPresent()) {
+            Optional<Basket> optBasket = basketService.getBasketByUser(user);
+            Basket basket;
+            Product product = optProduct.get();
+            if (optBasket.isPresent()) {
+                basket = optBasket.get();
+                basketService.addProductToBasket(basket, product);
+            } else {
+                List<Product> products = new ArrayList<>();
+                products.add(product);
+                basket = new Basket(products,user);
+                basketService.addBasket(basket);
+                req.setAttribute("message", "Product add in your basket");
+            }
             HttpSession session = req.getSession();
             session.setAttribute("basket", basket);
-            req.setAttribute("size", basketService.size(user.getId()));
+            req.setAttribute("size", basketService.size(basket));
             req.setAttribute("products", productService.getAll());
             req.getRequestDispatcher("/products_user.jsp").forward(req, resp);
         } else {

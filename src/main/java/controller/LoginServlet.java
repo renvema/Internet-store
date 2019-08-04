@@ -5,7 +5,7 @@ import model.Basket;
 import model.Product;
 import model.User;
 import service.UserService;
-import utils.HashUtil;
+import utils.SaltHashUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,9 +24,11 @@ public class LoginServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+
         String email = req.getParameter("email");
-        String hashPassword = HashUtil.getSHA256SecurePassword(req.getParameter("password"));
         Optional<User> optUser = userService.findUserByEmail(email);
+        String hashPassword= SaltHashUtil.getSHA512SecurePassword(req.getParameter("password"),
+                optUser.get().getSalt());
         if (optUser.isPresent() && optUser.get().getPassword().equals(hashPassword)) {
             HttpSession session = req.getSession();
             session.setAttribute("user", optUser.get());
@@ -37,7 +39,6 @@ public class LoginServlet extends HttpServlet {
         } else {
             resp.sendRedirect("index.jsp");
         }
-
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)

@@ -1,7 +1,7 @@
 package factory;
 
 import dao.UserDao;
-import dao.impl.UserMySQLDaoImpl;
+import dao.impl.UserHibernateDaoImpl;
 
 public class UserDaoFactory {
 
@@ -12,7 +12,7 @@ public class UserDaoFactory {
 
     public static UserDao getUserDao() {
         if (instance == null) {
-            instance = new UserMySQLDaoImpl();
+            instance = new UserHibernateDaoImpl();
         }
         return instance;
     }
