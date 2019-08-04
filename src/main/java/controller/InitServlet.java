@@ -6,7 +6,6 @@ import model.Product;
 import model.User;
 import service.ProductService;
 import service.UserService;
-import utils.HashUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,14 +19,12 @@ public class InitServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        String hashPasswordTest = HashUtil.getSHA256SecurePassword ("test");
-        String hashPasswordAdmin = HashUtil.getSHA256SecurePassword ("admin");
-        String hashPasswordUser = HashUtil.getSHA256SecurePassword ("user");
-        User test = new User("test@test.ua", hashPasswordTest, "admin");
+
+        User test = new User("test@test.ua", "test", "admin");
         userService.addUser(test);
-        User admin = new User("admin@admin.ua", hashPasswordAdmin, "admin");
+        User admin = new User("admin@admin.ua","admin", "admin");
         userService.addUser(admin);
-        User user = new User("user@user.ua", hashPasswordUser, "user");
+        User user = new User("user@user.ua", "user", "user");
         userService.addUser(user);
         Product bread = new Product("bread", "white bread with garlic", 12.50);
         productService.addProduct(bread);

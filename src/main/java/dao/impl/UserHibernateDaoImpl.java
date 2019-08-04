@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import utils.HibernateUtil;
+import utils.SaltHashUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +22,8 @@ public class UserHibernateDaoImpl implements UserDao {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
+            String saltPassword= SaltHashUtil.getSHA512SecurePassword(user.getPassword(),user.getSalt());
+            user.setPassword(saltPassword);
             session.save(user);
             transaction.commit();
             logger.info("User " + user + " added in db");
@@ -89,6 +92,8 @@ public class UserHibernateDaoImpl implements UserDao {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
+            String saltPassword= SaltHashUtil.getSHA512SecurePassword(user.getPassword(),user.getSalt());
+            user.setPassword(saltPassword);
             session.update(user);
             transaction.commit();
             logger.info("User " + user + " update in db");
